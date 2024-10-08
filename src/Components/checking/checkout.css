@@ -1,0 +1,31 @@
+/* Override background color of the calendar */
+.react-datepicker__month-container {
+    background-color: #6B6978 !important;
+    /* Light blue background with high specificity */
+}
+
+/* Optional: Override header background */
+.react-datepicker__header {
+    background-color: #4C4C4C !important;
+    color: #C0C0C0 !important;
+    /* Light blue background for the header */
+    border-bottom: none !important;
+    /* Remove border if needed */
+}
+
+/* Optional: Change the color of the selected day */
+.react-datepicker__day--selected {
+    background-color: #A4181B !important;
+    /* Dark blue for selected date */
+    color: white !important;
+    /* White text for selected date */
+}
+
+/* 
+        goldRoss: "#B76E79",
+        navyGray: "#4C4C4C",
+        navyWhite: "#6B6978",
+        silver: "#C0C0C0",
+        charcoal: "#333333",
+        redBg: "#A4181B",
+ */
