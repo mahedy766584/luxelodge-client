@@ -9,6 +9,7 @@ import Blogs from "../Pages/blogs/Blogs";
 import Contact from "../Pages/contact/Contact";
 import About from "../Pages/about/About";
 import Gallery from "../Pages/gallery/Gallery";
+import CardDetails from "../Pages/roomDetails/CardDetails";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -47,6 +48,11 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: "/gallery",
                 element: <Gallery/>
+            },
+            {
+                path: "/cartDetails/:id",
+                element: <CardDetails/>,
+                loader: ({params}) => fetch(`http://localhost:5000/rooms/${params.id}`)
             }
         ]
     }

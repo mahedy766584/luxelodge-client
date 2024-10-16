@@ -3,7 +3,7 @@ import NavbarMain from "../Shared/Navbar/Navbar";
 
 const MainLayout = () => {
     return (
-        <div className="bg-silver">
+        <div className="">
             <div>
                 <NavbarMain />
             </div>

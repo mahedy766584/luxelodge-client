@@ -1,0 +1,23 @@
+.swiper-slide-active .hero-btn {
+    transform: translateY(40px);
+    opacity: 5;
+    transition: all 2s ease;
+    transition-delay: 0.3s;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    display: none;
+}
+
+/* .swiper-pagination {
+    background-color: red;
+} */
+
+/* Basic bullet style */
+.swiper-pagination-bullet {
+    background-color: #A4181B;
+    width: 6px;
+    height: 6px;
+    display: none;
+}

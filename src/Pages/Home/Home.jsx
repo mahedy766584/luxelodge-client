@@ -7,11 +7,11 @@ import ShortRooms from "../../Components/shortRooms/ShortRooms";
 const Home = () => {
     return (
         <>
-            <div className="space-y-36">
+            <div className="space-y-32">
                 <Hero />
                 <ShortAbout />
                 <ShortOffer />
-                <ShortRooms/>
+                <ShortRooms />
             </div>
         </>
     );

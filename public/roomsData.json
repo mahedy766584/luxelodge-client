@@ -1,0 +1,207 @@
+
+
+[
+    {
+        "title": "Cozy Single Room",
+        "roomNumber": 101,
+        "type": "Single",
+        "pricePerNight": 100,
+        "isAvailable": "True",
+        "maxGuests": 1,
+        "checkInDate": "false",
+        "checkOutDate": "false",
+        "review": {
+            "averageRating": 4.5,
+            "numberOfReviews": 24
+        },
+        "description": "This room is ideal for solo travelers, offering a peaceful atmosphere with a single bed, air conditioning, flat-screen TV, and complimentary Wi-Fi.",
+        "facilities": [
+            {"name": "Air Conditioning"},
+            {"name": "Flat-Screen TV"},
+            {"name": "Complimentary Wi-Fi"},
+            {"name": "En-Suite Bathroom"},
+            {"name": "Daily Housekeeping"},
+            {"name": "Room Service"}
+        ],
+        "images": [
+            {"name": "Room View", "url": "https://example.com/images/cozy_single_room_view.jpg"},
+            {"name": "Dining Room", "url": "https://example.com/images/cozy_single_dining.jpg"},
+            {"name": "Washroom", "url": "https://example.com/images/cozy_single_washroom.jpg"},
+            {"name": "Bed Area", "url": "https://example.com/images/cozy_single_bed.jpg"}
+        ]
+    },
+    {
+        "title": "Deluxe Double Room",
+        "roomNumber": 102,
+        "type": "Double",
+        "pricePerNight": 150,
+        "isAvailable": "True",
+        "maxGuests": 2,
+        "checkInDate": "false",
+        "checkOutDate": "false",
+        "review": {
+            "averageRating": 4.8,
+            "numberOfReviews": 35
+        },
+        "description": "Spacious and comfortable, this deluxe room offers a double bed, large windows, air conditioning, and a modern bathroom with premium toiletries.",
+        "facilities": [
+            {"name": "Air Conditioning"},
+            {"name": "Flat-Screen TV"},
+            {"name": "Complimentary Wi-Fi"},
+            {"name": "Mini Bar"},
+            {"name": "Premium Toiletries"},
+            {"name": "Room Service"}
+        ],
+        "images": [
+            {"name": "Room View", "url": "https://example.com/images/deluxe_double_room_view.jpg"},
+            {"name": "Dining Room", "url": "https://example.com/images/deluxe_double_dining.jpg"},
+            {"name": "Washroom", "url": "https://example.com/images/deluxe_double_washroom.jpg"},
+            {"name": "Bed Area", "url": "https://example.com/images/deluxe_double_bed.jpg"}
+        ]
+    },
+    {
+        "title": "Luxury Suite",
+        "roomNumber": 103,
+        "type": "Suite",
+        "pricePerNight": 300,
+        "isAvailable": "True",
+        "maxGuests": 4,
+        "checkInDate": "false",
+        "checkOutDate": "false",
+        "review": {
+            "averageRating": 5.0,
+            "numberOfReviews": 18
+        },
+        "description": "Our luxury suite offers unparalleled comfort, featuring a king-size bed, living area, kitchenette, and a stunning view of the city skyline.",
+        "facilities": [
+            {"name": "Air Conditioning"},
+            {"name": "Flat-Screen TV"},
+            {"name": "Complimentary Wi-Fi"},
+            {"name": "Kitchenette"},
+            {"name": "City View"},
+            {"name": "Jacuzzi"}
+        ],
+        "images": [
+            {"name": "Living Room", "url": "https://example.com/images/luxury_suite_living_room.jpg"},
+            {"name": "Dining Room", "url": "https://example.com/images/luxury_suite_dining.jpg"},
+            {"name": "Washroom", "url": "https://example.com/images/luxury_suite_washroom.jpg"},
+            {"name": "Bedroom", "url": "https://example.com/images/luxury_suite_bedroom.jpg"}
+        ]
+    },
+    {
+        "title": "Family Room",
+        "roomNumber": 104,
+        "type": "Family",
+        "pricePerNight": 180,
+        "isAvailable": "false",
+        "maxGuests": 4,
+        "checkInDate": "false",
+        "checkOutDate": "false",
+        "review": {
+            "averageRating": 4.7,
+            "numberOfReviews": 45
+        },
+        "description": "This spacious family room is perfect for a small family, offering two queen-size beds, a children's play area, and a balcony.",
+        "facilities": [
+            {"name": "Air Conditioning"},
+            {"name": "Flat-Screen TV"},
+            {"name": "Complimentary Wi-Fi"},
+            {"name": "Children's Play Area"},
+            {"name": "Balcony"},
+            {"name": "Room Service"}
+        ],
+        "images": [
+            {"name": "Room View", "url": "https://example.com/images/family_room_view.jpg"},
+            {"name": "Dining Room", "url": "https://example.com/images/family_room_dining.jpg"},
+            {"name": "Washroom", "url": "https://example.com/images/family_room_washroom.jpg"},
+            {"name": "Play Area", "url": "https://example.com/images/family_room_play_area.jpg"}
+        ]
+    },
+    {
+        "title": "Ocean View Room",
+        "roomNumber": 105,
+        "type": "Double",
+        "pricePerNight": 220,
+        "isAvailable": "True",
+        "maxGuests": 2,
+        "checkInDate": "false",
+        "checkOutDate": "false",
+        "review": {
+            "averageRating": 4.9,
+            "numberOfReviews": 50
+        },
+        "description": "Wake up to the sound of waves in this beautiful ocean view room, featuring a private balcony, queen-size bed, and stunning sea view.",
+        "facilities": [
+            {"name": "Air Conditioning"},
+            {"name": "Flat-Screen TV"},
+            {"name": "Complimentary Wi-Fi"},
+            {"name": "Private Balcony"},
+            {"name": "Sea View"},
+            {"name": "Room Service"}
+        ],
+        "images": [
+            {"name": "Ocean View", "url": "https://example.com/images/ocean_view_room.jpg"},
+            {"name": "Dining Room", "url": "https://example.com/images/ocean_view_dining.jpg"},
+            {"name": "Washroom", "url": "https://example.com/images/ocean_view_washroom.jpg"},
+            {"name": "Balcony", "url": "https://example.com/images/ocean_view_balcony.jpg"}
+        ]
+    },
+    {
+        "title": "Garden Suite",
+        "roomNumber": 106,
+        "type": "Suite",
+        "pricePerNight": 250,
+        "isAvailable": "false",
+        "maxGuests": 3,
+        "checkInDate": "false",
+        "checkOutDate": "false",
+        "review": {
+            "averageRating": 4.6,
+            "numberOfReviews": 40
+        },
+        "description": "Our Garden Suite is designed for relaxation, offering a garden-facing patio, king-size bed, private garden access, and a luxurious bath.",
+        "facilities": [
+            {"name": "Air Conditioning"},
+            {"name": "Flat-Screen TV"},
+            {"name": "Complimentary Wi-Fi"},
+            {"name": "Private Garden"},
+            {"name": "Patio"},
+            {"name": "Room Service"}
+        ],
+        "images": [
+            {"name": "Garden View", "url": "https://example.com/images/garden_suite_view.jpg"},
+            {"name": "Dining Room", "url": "https://example.com/images/garden_suite_dining.jpg"},
+            {"name": "Washroom", "url": "https://example.com/images/garden_suite_washroom.jpg"},
+            {"name": "Patio", "url": "https://example.com/images/garden_suite_patio.jpg"}
+        ]
+    },
+    {
+        "title": "Executive Suite",
+        "roomNumber": 107,
+        "type": "Suite",
+        "pricePerNight": 320,
+        "isAvailable": "True",
+        "maxGuests": 3,
+        "checkInDate": "false",
+        "checkOutDate": "false",
+        "review": {
+            "averageRating": 5.0,
+            "numberOfReviews": 30
+        },
+        "description": "Designed for business travelers, this suite offers a private office space, meeting area, and access to executive services with a city view.",
+        "facilities": [
+            {"name": "Air Conditioning"},
+            {"name": "Flat-Screen TV"},
+            {"name": "Complimentary Wi-Fi"},
+            {"name": "Office Space"},
+            {"name": "Meeting Area"},
+            {"name": "Room Service"}
+        ],
+        "images": [
+            {"name": "Office Space", "url": "https://example.com/images/executive_suite_office.jpg"},
+            {"name": "Dining Room", "url": "https://example.com/images/executive_suite_dining.jpg"},
+            {"name": "Washroom", "url": "https://example.com/images/executive_suite_washroom.jpg"},
+            {"name": "https://example.com/images/executive_suite_washroom.jpg"}
+        ]
+    }
+]

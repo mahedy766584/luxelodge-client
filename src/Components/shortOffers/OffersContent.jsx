@@ -18,7 +18,7 @@ const OffersContent = () => {
                 </div>
             </div>
             {/* offers content here */}
-            <div className="text-silver flex flex-col items-start lg:text-start text-center flex-1  space-y-4">
+            <div className="text-silver flex flex-col items-start lg:text-start text-justify lg:px-0 px-4 flex-1  space-y-4">
                 <h1 className="font-kanit text-4xl font-medium">Exclusive Offers Just for You</h1>
                 <p className="font-poppins text-xl font-normal">
                     "From romantic getaways to family fun packages, enjoy exclusive deals like 50% off weekend stays, free kids' breakfast, spa discounts, and more! Don't miss out on our limited-time offers—book now and make the most of your stay at LuxeLodge."

@@ -5,16 +5,16 @@ import { NavLink } from "react-router-dom";
 const NavList = () => {
     return (
         <>
-            <ul className="mb-4 mt-2 relative flex  text-navyGray flex-col font-kanit text-xl font-normal gap-2 lg:mb-0 lg:mt-0 lg:flex-row  lg:items-center lg:gap-6">
+            <ul className="mb-4 mt-2 relative flex  text-navyGray flex-col font-poppins text-xl font-normal gap-2 lg:mb-0 lg:mt-0 lg:flex-row  lg:items-center lg:gap-6">
                 <Typography
                     as="li"
                     color="blue-gray"
-                    className="group relative font-kanit text-xl font-normal py-1"
+                    className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
                         to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg lg:px-[4px]" : ""
+                            isPending ? "pending" : isActive ? "border-b-[3px] border-redBg text-redBg lg:px-[4px]" : ""
                         }
                     >
                         Home
@@ -24,7 +24,7 @@ const NavList = () => {
                 <Typography
                     as="li"
                     color="blue-gray"
-                    className="group relative font-kanit text-xl font-normal py-1"
+                    className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
                         to="/rooms"
@@ -39,7 +39,7 @@ const NavList = () => {
                 <Typography
                     as="li"
                     color="blue-gray"
-                    className="group relative font-kanit text-xl font-normal py-1"
+                    className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
                         to="/offers"
@@ -54,7 +54,7 @@ const NavList = () => {
                 <Typography
                     as="li"
                     color="blue-gray"
-                    className="group relative font-kanit text-xl font-normal py-1"
+                    className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
                         to="/gallery"
@@ -69,7 +69,7 @@ const NavList = () => {
                 <Typography
                     as="li"
                     color="blue-gray"
-                    className="group relative font-kanit text-xl font-normal py-1"
+                    className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
                         to="/contact"
@@ -84,7 +84,7 @@ const NavList = () => {
                 <Typography
                     as="li"
                     color="blue-gray"
-                    className="group relative font-kanit text-xl font-normal py-1"
+                    className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
                         to="/about"
@@ -99,7 +99,7 @@ const NavList = () => {
                 <Typography
                     as="li"
                     color="blue-gray"
-                    className="group relative font-kanit text-xl font-normal py-1"
+                    className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
                         to="/blogs"

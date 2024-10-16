@@ -37,7 +37,7 @@ const NavbarMain = () => {
         <>
             <div className={` bg-silver z-50 fixed top-0 w-full left-0   rounded-none border-none   shadow-none ${isScrolled ? 'hidden' : 'visible'}`}>
                     {/* <TopNavbar/> */}
-                <Navbar className={`rounded-none border-none bg-silver py-0 lg:px-32`}>
+                <Navbar className={`rounded-none border-none bg-silver py-0 lg:px-32 font-poppins`}>
                     <div className="flex items-center justify-between  text-blue-gray-9008">
                         <Typography
                             as="a"

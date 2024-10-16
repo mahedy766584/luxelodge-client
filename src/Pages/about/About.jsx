@@ -5,6 +5,7 @@ import Container from "../../Components/Container/Container";
 
 
 const About = () => {
+
     return (
         <Container>
             <div className="flex lg:gap-10 items-center">
