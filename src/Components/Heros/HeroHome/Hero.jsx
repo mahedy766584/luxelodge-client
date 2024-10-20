@@ -9,12 +9,12 @@ import 'swiper/css/pagination';
 // import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 
-import Container from "../../Container/Container";
+
 import Checking from '../../checking/Checking';
 
 //hero background video;
-import video1 from "../../../assets/heroVideo/video8.mp4";
-import video2 from "../../../assets/heroVideo/video6.mp4";
+// import video1 from "../../../assets/heroVideo/video8.mp4";
+// import video2 from "../../../assets/heroVideo/video6.mp4";
 import video3 from "../../../assets/heroVideo/video3.mp4";
 import HeroContent from './HeroContent';
 
@@ -30,21 +30,21 @@ const Hero = () => {
                     spaceBetween={30}
                     slidesPerView={1}
                     effect={'fade'}
-                    loop={true}
+                    loop={false}
                     autoplay={{
                         delay: 6000,
                         disableOnInteraction: false,
                     }}
                 >
-                    <SwiperSlide><HeroContent video={video1} /></SwiperSlide>
-                    <SwiperSlide><HeroContent video={video2} /></SwiperSlide>
+                    {/* <SwiperSlide><HeroContent video={video1} /></SwiperSlide> */}
+                    {/* <SwiperSlide><HeroContent video={video2} /></SwiperSlide> */}
                     <SwiperSlide><HeroContent video={video3} /></SwiperSlide>
                 </Swiper>
             </div>
             {/* <Container> */}
-                <div className='z-40 absolute lg:-bottom-20 -bottom-96 w-full mx-auto flex justify-center items-center'>
-                    <Checking />
-                </div>
+            <div className='z-40 absolute lg:-bottom-20 -bottom-96 w-full mx-auto flex justify-center items-center'>
+                <Checking />
+            </div>
             {/* </Container> */}
         </div>
     );

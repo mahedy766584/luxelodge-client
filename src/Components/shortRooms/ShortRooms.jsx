@@ -5,6 +5,7 @@ import Container from "../Container/Container";
 import { useState } from "react";
 import { IconButton } from "@material-tailwind/react";
 import TitleSection from "../titleSection/TitleSection";
+import LoadingAnimate from "../loding/LoadingAnimate";
 
 const ShortRooms = () => {
 
@@ -18,7 +19,7 @@ const ShortRooms = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const limit = 4;
 
-    const { data = [] } = useQuery({
+    const { data = [], isLoading } = useQuery({
         queryKey: ['rooms', currentPage],
         queryFn: () => getRooms(currentPage, limit)
     });
@@ -29,6 +30,10 @@ const ShortRooms = () => {
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
+
+    if(isLoading){
+        return <LoadingAnimate/>
+    }
 
     return (
         <Container>

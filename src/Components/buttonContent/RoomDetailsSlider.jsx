@@ -12,17 +12,13 @@ import "./details.css";
 // import required modules
 import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 
-const RoomDetailsSlider = ({ images }) => {
+const RoomDetailsSlider = ({ images, isAvailable }) => {
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
         <div className='relative'>
             <Swiper
-                style={{
-                    '--swiper-navigation-color': '#fff',
-                    '--swiper-pagination-color': '#fff',
-                }}
                 loop={true}
                 spaceBetween={10}
                 navigation={true}
@@ -32,16 +28,18 @@ const RoomDetailsSlider = ({ images }) => {
                 }}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs, Autoplay]}
-                className="h-[480px] w-full relative z-10"
+                className="h-[440px] lg:w-full w-[350px] sm:w-[400px] md:w-full xl:w-full  relative z-10 rounded"
             >
                 {/* slider images here */}
                 {
                     images?.map((image, index) => (
                         <SwiperSlide key={index}>
                             <div className='relative'>
-                                <img src={image?.url} className='w-full h-full bg-cover bg-center bg-blend-overlay bg-no-repeat' />
-                                <div className='w-full h-full absolute top-0 bg-black bg-opacity-20'>
-
+                                <img src={image?.url} className='w-full rounded lg:h-full h-[340px] bg-cover bg-center bg-blend-overlay bg-no-repeat' />
+                                <div className='w-full h-full absolute top-0 bg-black bg-opacity-20 flex items-center justify-center bg-cover bg-center bg-blend-overlay bg-no-repeat'>
+                                    <div className='bg-silver absolute top-0 left-0 my-4 bg-opacity-50'>
+                                        <h1 className='px-5 py-2 font-poppins text-xl font-normal text-redBg'>{isAvailable === 'True' && 'Is Available'}</h1>
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -49,29 +47,31 @@ const RoomDetailsSlider = ({ images }) => {
                 }
             </Swiper>
             {/* Button or Image Slider on top */}
-            <div className="absolute bottom-4 w-full mx-auto z-20">
+            <div
+            className="absolute lg:bottom-4 bottom-8 hidden lg:flex lg:w-full w-[340px] mx-auto z-20"
+            >
                 <Swiper
                     onSwiper={setThumbsSwiper}
                     loop={true}
                     spaceBetween={10}
-                    slidesPerView={4}
+                    slidesPerView={3}
                     freeMode={true}
                     watchSlidesProgress={true}
                     modules={[FreeMode, Navigation, Thumbs]}
-                    className="mySwiper relative w-96 h-auto z-20"
+                    className="mySwiper relative hidden  lg:w-96 w-full h-auto z-20 mx-auto lg:flex justify-center items-center"
                 >
                     {/* slider image here */}
                     {
                         images?.map((image, index) => (
                             <SwiperSlide key={index}>
-                                <img src={image?.url} className='w-[200px] h-[60px] bg-cover bg-center bg-blend-overlay bg-no-repeat' />
+                                <img src={image?.url} className='w-[200px] mx-auto hidden   h-[60px] bg-cover bg-center bg-blend-overlay bg-no-repeat lg:flex justify-center items-center' />
                             </SwiperSlide>
                         ))
                     }
                 </Swiper>
             </div>
 
-        </div >
+        </div>
     );
 };
 

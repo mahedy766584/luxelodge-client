@@ -20,6 +20,7 @@ export default {
       textColor: {
         goldRoss: "#B76E79",
         navyGray: "#4C4C4C",
+        navyWhite: "#6B6978",
         silver: "#C0C0C0",
         charcoal: "#333333",
         redBg: "#A4181B",

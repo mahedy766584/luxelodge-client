@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Navbar, Collapse, Typography,  IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon, } from "@heroicons/react/24/outline";
 import NavbarSecondSlide from "./NavbarSecondSlide";
@@ -9,10 +9,10 @@ import NavList from "./NavList";
 // import TopNavbar from "./TopNavbar";
 
 const NavbarMain = () => {
-    const [openNav, setOpenNav] = React.useState(false);
+    const [openNav, setOpenNav] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener(
             "resize",
             () => window.innerWidth >= 960 && setOpenNav(false),

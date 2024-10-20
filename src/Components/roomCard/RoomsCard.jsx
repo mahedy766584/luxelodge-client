@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Card, CardHeader, Typography, CardBody } from "@material-tailwind/react";
 import CardSlider from "./cardSlider/CardSlider";
@@ -14,7 +13,7 @@ const RoomsCard = ({ room }) => {
 
     // console.log(Object.keys(room).join(","));
 
-    const { _id, title, roomNumber, type, pricePerNight, isAvailable, maxGuests, checkInDate, checkOutDate, review, description, facilities, images, bathroom, beds, guests } = room || {};
+    const { _id, title,  pricePerNight,  review,  images, bathroom, beds, guests } = room || {};
 
     return (
         <Card className=" overflow-hidden shadow-[0px_2px_33px_8px_rgba(204,204,204,0.32)]">
@@ -52,7 +51,7 @@ const RoomsCard = ({ room }) => {
                 <Link to={`/cartDetails/${_id}`}>
                     <button
                         className="relative lg:text-start overflow-hidden mb-6 font-medium border-2 border-redBg py-2 px-4 bg-silver hover:text-silver duration-300 top-6 text-navyGray  group">
-                        <span className="relative z-10 flex items-center  uppercase">Full Info  <IoIosArrowForward className="font-bold" /></span>
+                        <span className="relative z-10 flex items-center justify-center  uppercase">Full Info  <IoIosArrowForward className="font-bold" /></span>
                         <div className="absolute inset-0 bg-redBg transition-all duration-500 ease-out group-hover:translate-x-0 origin-center left-[50%] right-[50%] group-hover:left-0 group-hover:right-0 "></div>
                     </button>
                 </Link>

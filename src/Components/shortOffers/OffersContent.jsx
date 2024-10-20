@@ -26,7 +26,9 @@ const OffersContent = () => {
                 <p className="font-poppins text-xl font-normal">
                     This general title and description can give visitors a quick overview of the offers without going into specifics, enticing them to explore further. You can link this to your dedicated Offers page for more details on each promotion.
                 </p>
-                <Button>Discover Our Offers</Button>
+                <div className="flex">
+                    <Button>Discover Our Offers</Button>
+                </div>
             </div>
         </div>
     );
