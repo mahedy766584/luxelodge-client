@@ -1,9 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import bgTop from "../../assets/aroundImg/around5.jpg";
 import ButtonContents from "../../Components/buttonContent/ButtonContents";
-import Container from "../../Components/Container/Container";
 import AroundTheHotel from "../../Components/aroundTheHotel/AroundTheHotel";
-import ImageRotate from "../../Components/imageRotate/ImageRotate";
+import UseTopContent from "../../Hooks/UseTopContent";
+// import ImageRotate from "../../Components/imageRotate/ImageRotate";
 
 
 const CardDetails = () => {
@@ -13,25 +13,13 @@ const CardDetails = () => {
     return (
         <div>
             {/* top part */}
-            <div className="relative">
-                <div className="lg:mt-[75px] w-full h-[500px] relative">
-
-                    {/* image 360 degree rotation here */}
-                    <ImageRotate rotateImg={bgTop} />
-
-                    <div className="absolute w-full h-full top-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <h1 className="lg:text-5xl font-poppins  font-semibold text-silver animate-bounce duration-700">Welcome to (User Name)</h1>
-                    </div>
-                </div>
-            </div>
+            <UseTopContent bgTop={bgTop} title={'Luxurious Rooms & Suites: Your Perfect Stay Awaits'} subTitle={"Discover our range of exquisitely designed rooms and suites, each tailored to provide unparalleled comfort and style. Whether you're seeking a cozy room for a weekend getaway or a spacious suite for an extended stay, LuxeLodge offers the perfect blend of elegance and convenience. Enjoy stunning views, modern amenities, and personalized services that make every stay unforgettable. Explore our room options and find the perfect space to relax and rejuvenate."}/>
 
             {/* button content component here */}
             <ButtonContents roomDetails={roomDetails} />
 
             {/* around items here */}
-            <Container>
-                <AroundTheHotel />
-            </Container>
+            <AroundTheHotel />
         </div>
     );
 };

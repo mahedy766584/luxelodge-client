@@ -39,7 +39,7 @@ const ShortAbout = () => {
                             <NavLink to={'/about'}>
                                 <button
                                     className="relative lg:text-start overflow-hidden mb-6 font-medium border-2 border-redBg py-3 px-10 bg-silver hover:text-silver duration-300 top-6 text-navyGray  group">
-                                    <span className="relative z-10 uppercase">Check Availability</span>
+                                    <span className="relative z-10 uppercase">See More About</span>
                                     <div className="absolute inset-0 bg-redBg transition-all duration-500 ease-out group-hover:translate-x-0 origin-center left-[50%] right-[50%] group-hover:left-0 group-hover:right-0 "></div>
                                 </button>
                             </NavLink>

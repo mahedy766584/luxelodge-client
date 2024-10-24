@@ -6,7 +6,7 @@ import loadingAnimate from "../../../public/loding.json"
 const LoadingAnimate = () => {
     return (
         <Container>
-            <div>
+            <div className="mt-20">
                 <Lottie className="w-[200px] h-[200px] mx-auto" animationData={loadingAnimate} />
             </div>
         </Container>

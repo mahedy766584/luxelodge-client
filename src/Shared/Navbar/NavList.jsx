@@ -42,21 +42,6 @@ const NavList = () => {
                     className="group relative font-poppins text-xl font-normal"
                 >
                     <NavLink
-                        to="/offers"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg px-[4px]" : ""
-                        }
-                    >
-                        Offers
-                        <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                    </NavLink>
-                </Typography>
-                <Typography
-                    as="li"
-                    color="blue-gray"
-                    className="group relative font-poppins text-xl font-normal"
-                >
-                    <NavLink
                         to="/gallery"
                         className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg px-[4px]" : ""
@@ -93,21 +78,6 @@ const NavList = () => {
                         }
                     >
                         About
-                        <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                    </NavLink>
-                </Typography>
-                <Typography
-                    as="li"
-                    color="blue-gray"
-                    className="group relative font-poppins text-xl font-normal"
-                >
-                    <NavLink
-                        to="/blogs"
-                        className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg px-[4px]" : ""
-                        }
-                    >
-                        Blogs
                         <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NavLink>
                 </Typography>

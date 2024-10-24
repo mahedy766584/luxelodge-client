@@ -17,7 +17,7 @@ const Content = () => {
                             <p className="font-normal text-lg text-navyWhite w-[400px]">"Discover LuxeLodge – your gateway to exceptional hotel experiences. Stay with us and enjoy premium service, comfort, and unforgettable stays."</p>
                         </div>
                     </div>
-                    <div className="flex flex-col space-y-6">
+                    <div className="flex flex-col space-y-6 lg:mt-5">
                         <div className="space-y-2">
                             <h1 className="text-2xl font-medium text-navyGray">Contact With Us</h1>
                             <p className="text-sm text-navyGray text-opacity-65 tracking-wider">SOCIAL MEDIA CHANNELS</p>
@@ -29,7 +29,7 @@ const Content = () => {
                             <button className="hover:text-redBg duration-500 hover:scale-110"><FaYoutube size={30} /></button>
                         </div>
                     </div>
-                    <div className="flex flex-col space-y-6">
+                    <div className="flex flex-col space-y-6 lg:mt-5">
                         <div className="space-y-2">
                             <h1 className="text-2xl font-medium text-navyGray">Phone Support</h1>
                             <p className="text-sm text-navyGray text-opacity-65 tracking-widest">24 HOURS A DAY</p>

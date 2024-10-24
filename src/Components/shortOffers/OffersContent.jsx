@@ -2,6 +2,7 @@
 
 import towelImage from "../../assets/offersVido/pngwing.com (7).png"
 import Button from "../button/Button";
+import { Link } from "react-router-dom";
 
 const OffersContent = () => {
     return (
@@ -27,7 +28,9 @@ const OffersContent = () => {
                     This general title and description can give visitors a quick overview of the offers without going into specifics, enticing them to explore further. You can link this to your dedicated Offers page for more details on each promotion.
                 </p>
                 <div className="flex">
-                    <Button>Discover Our Offers</Button>
+                    <Link to={'/rooms'}>
+                        <Button>Discover Our Offers</Button>
+                    </Link>
                 </div>
             </div>
         </div>

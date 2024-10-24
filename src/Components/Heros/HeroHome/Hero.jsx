@@ -36,8 +36,6 @@ const Hero = () => {
                         disableOnInteraction: false,
                     }}
                 >
-                    {/* <SwiperSlide><HeroContent video={video1} /></SwiperSlide> */}
-                    {/* <SwiperSlide><HeroContent video={video2} /></SwiperSlide> */}
                     <SwiperSlide><HeroContent video={video3} /></SwiperSlide>
                 </Swiper>
             </div>

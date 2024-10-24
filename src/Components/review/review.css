@@ -1,0 +1,23 @@
+.slider-container .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(250px at center -40px);
+
+}
+
+.slick-slide>div {
+    margin: 0 10px;
+}
+
+/* .slick-prev,
+.slick-next {
+    padding: -60px;
+} */
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px;
+    color: #4C4C4C;
+    /* Customize the arrow color */
+}
