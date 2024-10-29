@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import NavbarMain from "../Shared/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import MainLoading from "../Components/mainLoading/MainLoading";
@@ -7,11 +7,15 @@ import Footer from "../Shared/Footer/Footer";
 const MainLayout = () => {
 
     const [isLoading, setIsLoading] = useState(true);
+    const location = useLocation();
 
     useEffect(() => {
         const timer = setTimeout(() => setIsLoading(false), 3000);
         return () => clearTimeout(timer);
     }, [])
+
+    const noHeaderFooter = location.pathname.includes('signIn') || location.pathname.includes('signUp');
+    // console.log(noHeaderFooter);
 
     return (
         <>
@@ -19,11 +23,11 @@ const MainLayout = () => {
                 isLoading ? <MainLoading /> :
                     <div className="duration-700">
                         <div>
-                            <NavbarMain />
+                            {noHeaderFooter || <NavbarMain />}
                         </div>
                         <Outlet />
                         <div>
-                            <Footer />
+                            {noHeaderFooter || <Footer />}
                         </div>
                     </div>
             }

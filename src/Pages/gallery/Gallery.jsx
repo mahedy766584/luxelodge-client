@@ -19,97 +19,103 @@ import bedImg1 from "../../assets/galleryImages/bedArea.jpg";
 // break image;
 import breakImg from "../../assets/galleryImages/breakImage.jpg";
 import Container from "../../Components/Container/Container";
+import { Helmet } from "react-helmet-async";
 
 
 const Gallery = () => {
     return (
-        <div className="mt-24">
-            <Container>
-                <TitleSection title={'Gallery of LuxeLodge Moments'} subTitle={'Discover the elegance of LuxeLodge through our curated gallery. Each image highlights the beauty, luxury, and comfort that make every stay unforgettable. Explore the stunning rooms, serene landscapes, and exclusive experiences awaiting you at LuxeLodge.'} />
-                <div className="grid lg:grid-cols-3 gap-4">
-                    {/* around images */}
-                    <img src={aroundImg1}
-                        className="bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full row-span-2 lg:col-span-1 col-span-4 rounded"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={aroundImg2}
-                        className="bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full col-span-2 row-span-2 rounded"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={aroundImg3}
-                        className="bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full rounded"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={aroundImg4}
-                        className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={aroundImg5}
-                        className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    {/* room view */}
-                    <img src={roomImg1} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={roomImg2} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full col-span-2 row-span-2"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={roomImg3} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={roomImg4} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={roomImg5} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    {/* play area */}
-                    <img src={playImg1} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    <img src={playImg2} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    {/* bed area */}
-                    <img src={bedImg1} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                    {/* break image */}
-                    <img src={breakImg} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
-                        loading="lazy"
-                        width={'400'}
-                        height={'400'}
-                    />
-                </div>
-            </Container>
-        </div>
+        <>
+        <Helmet>
+            <title>LuxeLodge | Gallery</title>
+        </Helmet>
+            <div className="mt-32">
+                <Container>
+                    <TitleSection title={'Gallery of LuxeLodge Moments'} subTitle={'Discover the elegance of LuxeLodge through our curated gallery. Each image highlights the beauty, luxury, and comfort that make every stay unforgettable. Explore the stunning rooms, serene landscapes, and exclusive experiences awaiting you at LuxeLodge.'} />
+                    <div className="grid lg:grid-cols-3 gap-4">
+                        {/* around images */}
+                        <img src={aroundImg1}
+                            className="bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full row-span-2 lg:col-span-1 col-span-4 rounded"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={aroundImg2}
+                            className="bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full col-span-2 row-span-2 rounded"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={aroundImg3}
+                            className="bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full rounded"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={aroundImg4}
+                            className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={aroundImg5}
+                            className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        {/* room view */}
+                        <img src={roomImg1} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={roomImg2} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full col-span-2 row-span-2"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={roomImg3} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={roomImg4} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={roomImg5} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        {/* play area */}
+                        <img src={playImg1} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        <img src={playImg2} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        {/* bed area */}
+                        <img src={bedImg1} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                        {/* break image */}
+                        <img src={breakImg} className="rounded bg-cover bg-no-repeat bg-blend-overlay bg-center h-full w-full"
+                            loading="lazy"
+                            width={'400'}
+                            height={'400'}
+                        />
+                    </div>
+                </Container>
+            </div>
+        </>
     );
 };
 

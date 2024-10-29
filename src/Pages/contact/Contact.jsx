@@ -4,11 +4,15 @@ import Container from "../../Components/Container/Container";
 import FormContent from "../../Components/contactContent/FormContent";
 import ContactOption from "../../Components/contactContent/ContactOption";
 import MapContent from "../../Components/contactContent/MapContent";
+import { Helmet } from "react-helmet-async";
 // import CheckMap from "../../Components/contactContent/CheckMap";
 
 const Contact = () => {
     return (
         <div>
+            <Helmet>
+                <title>LuxeLodge | Contact</title>
+            </Helmet>
             {/* this is top content component */}
             <UseTopContent bgTop={bgTop} title={'Get In Touch with LuxeLodge'} subTitle={'"Have any questions or need assistance? We’re here to help! Whether you’re inquiring about reservations, our services, or just want to leave a message, feel free to reach out. Fill out the form below or use the contact details provided, and our team will get back to you as soon as possible. We look forward to hearing from you!"'} />
             <Container>

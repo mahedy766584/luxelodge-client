@@ -10,6 +10,7 @@ import UseTopContent from "../../Hooks/UseTopContent";
 
 import bgTop from "../../assets/aroundImg/around2.jpg";
 import AroundTheHotel from "../../Components/aroundTheHotel/AroundTheHotel";
+import { Helmet } from "react-helmet-async";
 
 const Rooms = () => {
 
@@ -40,46 +41,51 @@ const Rooms = () => {
     }
 
     return (
-        <div className="mt-16">
-            {/* page off rooms here buy using use top content */}
-            <div>
-                <UseTopContent bgTop={bgTop}  title={'Welcome to (User name)'}/>
-            </div>
-            <Container>
-                <div className="mt-16">
-                    {/* title section here */}
-                    <TitleSection title={'Escape to Comfort: Explore Our Luxurious Rooms'} subTitle={'"Indulge in ultimate comfort with our elegantly designed rooms, tailored to offer you a restful and memorable stay."'} />
+        <>
+        <Helmet>
+            <title>LuxeLodge | Rooms</title>
+        </Helmet>
+            <div className="mt-16">
+                {/* page off rooms here buy using use top content */}
+                <div>
+                    <UseTopContent bgTop={bgTop} title={'Welcome to (User name)'} />
+                </div>
+                <Container>
+                    <div className="mt-16">
+                        {/* title section here */}
+                        <TitleSection title={'Escape to Comfort: Explore Our Luxurious Rooms'} subTitle={'"Indulge in ultimate comfort with our elegantly designed rooms, tailored to offer you a restful and memorable stay."'} />
 
-                    {/* hotel room card */}
-                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
-                        {
-                            rooms?.map((room) => <RoomsCard key={room._id} room={room} />)
-                        }
-                    </div>
-
-                    {/* pagination system included */}
-                    <div className="py-6 w-full flex justify-center items-center">
-                        <div className="flex items-center gap-2 text-center font-kanit text-white">
+                        {/* hotel room card */}
+                        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
                             {
-                                [...Array(totalPages).keys()].map((pageNumber) => (
-                                    <IconButton
-                                        key={pageNumber + 1}
-                                        onClick={() => paginate(pageNumber + 1)}
-                                        className={`${currentPage === pageNumber + 1 ? "bg-navyGray text-silver" : "bg-silver text-navyGray"}`}
-                                    >
-                                        {pageNumber + 1}
-                                    </IconButton>
-                                ))
+                                rooms?.map((room) => <RoomsCard key={room._id} room={room} />)
                             }
                         </div>
-                    </div>
 
+                        {/* pagination system included */}
+                        <div className="py-6 w-full flex justify-center items-center">
+                            <div className="flex items-center gap-2 text-center font-kanit text-white">
+                                {
+                                    [...Array(totalPages).keys()].map((pageNumber) => (
+                                        <IconButton
+                                            key={pageNumber + 1}
+                                            onClick={() => paginate(pageNumber + 1)}
+                                            className={`${currentPage === pageNumber + 1 ? "bg-navyGray text-silver" : "bg-silver text-navyGray"}`}
+                                        >
+                                            {pageNumber + 1}
+                                        </IconButton>
+                                    ))
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                </Container>
+                <div>
+                    <AroundTheHotel />
                 </div>
-            </Container>
-            <div>
-                <AroundTheHotel />
             </div>
-        </div>
+        </>
     );
 };
 

@@ -12,6 +12,7 @@ import bgTop from "../../assets/aroundImg/around1.jpg";
 import image1 from "../../assets/aboutImage/image9.jpg";
 import image2 from "../../assets/aboutImage/image7.jpg";
 import image3 from "../../assets/aboutImage/image3.jpg";
+import { Helmet } from "react-helmet-async";
 
 
 const About = () => {
@@ -36,6 +37,9 @@ const About = () => {
 
     return (
         <>
+        <Helmet>
+            <title>LuxeLodge | About</title>
+        </Helmet>
             <div>
                 {/* this is component for top part of about page */}
                 <UseTopContent bgTop={bgTop} title={aboutData?.About?.title} subTitle={aboutData?.About?.description} />

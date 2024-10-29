@@ -8,10 +8,10 @@ const ImageRotate = ({ rotateImg }) => {
     const config = {
         autoRotate: -2,
         pitch: 10,
-        yaw: 180,
-        hfov: 110,
+        yaw: 250,
+        hfov: 130,
         minHfov: 50,
-        maxHfov: 120,
+        maxHfov: 190,
         minPitch: -30,
         maxPitch: 30,
         autoLoad: true,
@@ -20,10 +20,9 @@ const ImageRotate = ({ rotateImg }) => {
         showZoomCtrl: false,
         showFullscreenCtrl: false,
     };
-
     const customStyle = {
         width: "100%",
-        height: "500px",
+        height: "100%",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",

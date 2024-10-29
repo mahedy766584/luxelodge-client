@@ -8,6 +8,10 @@ import Contact from "../Pages/contact/Contact";
 import About from "../Pages/about/About";
 import Gallery from "../Pages/gallery/Gallery";
 import CardDetails from "../Pages/roomDetails/CardDetails";
+import SignIn from "../Pages/signIn/SignIn";
+import SignUp from "../Pages/signUp/SignUp";
+import PrivateRoute from "../Components/private/PrivateRoute";
+import DashboardLayout from "../Layout/DashboardLayout";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -21,15 +25,15 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: "/rooms",
-                element: <Rooms />
+                element: <PrivateRoute><Rooms /></PrivateRoute>
             },
             {
                 path: "/bookings",
-                element: <Bookings />
+                element: <PrivateRoute><Bookings /></PrivateRoute>
             },
             {
                 path: "/contact",
-                element: <Contact />
+                element: <PrivateRoute><Contact /></PrivateRoute>
             },
             {
                 path: "/about",
@@ -37,12 +41,30 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: "/gallery",
-                element: <Gallery />
+                element: <PrivateRoute><Gallery /></PrivateRoute>
             },
             {
                 path: "/cartDetails/:id",
-                element: <CardDetails />,
+                element: <PrivateRoute><CardDetails /></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+            },
+            {
+                path: "/signIn",
+                element: <SignIn />
+            },
+            {
+                path: "/signUp",
+                element: <SignUp />
+            }
+        ]
+    },
+    {
+        path: "/dashboard",
+        element: <DashboardLayout/>,
+        errorElement: <ErrorPage/>,
+        children: [
+            {
+                // 
             }
         ]
     }

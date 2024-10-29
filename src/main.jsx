@@ -8,13 +8,18 @@ import { Toaster } from 'react-hot-toast';
 
 const queryClient = new QueryClient();
 import { ThemeProvider } from "@material-tailwind/react";
+import AuthProvider from './Components/provider/AuthProvider';
+import { ToastContainer } from 'react-toastify';
 
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
-        <RouterProvider router={myCreatedRouter} />
+        <AuthProvider>
+          <RouterProvider router={myCreatedRouter} />
+        </AuthProvider>
       </ThemeProvider>
+      <ToastContainer />
       <Toaster />
     </QueryClientProvider>
   </HelmetProvider>
