@@ -10,7 +10,7 @@ import { IoIosLogOut } from "react-icons/io";
 
 import './navbar.css';
 import { Link } from "react-router-dom";
-import { FaSun } from "react-icons/fa";
+import DarkMode from "../../Components/darkModeSystem/DarkMode";
 
 const NavbarMain = () => {
     const [openNav, setOpenNav] = useState(false);
@@ -45,7 +45,6 @@ const NavbarMain = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-
     return (
         <>
             <div
@@ -53,7 +52,7 @@ const NavbarMain = () => {
                     ${isHidden ? '-translate-y-full' : 'translate-y-0'} 
                     ${isScrolled ? 'bg-silver' : 'bg-transparent'} `}
             >
-                <Navbar className={`rounded-none border-none bg-silver bg-opacity-100 py-2 lg:px-40 font-poppins`}>
+                <Navbar className={`rounded-none border-none bg-silver dark:bg-slate-900 bg-opacity-100 py-2 lg:px-40 font-poppins`}>
                     <div className="flex items-center justify-between  text-blue-gray-9008">
                         <Typography
                             as="a"
@@ -67,6 +66,8 @@ const NavbarMain = () => {
                             <NavList />
                         </div>
                         <div className="hidden flex-wrap items-center gap-2 lg:flex">
+                            {/* this is component for dark mode system */}
+                            <DarkMode />
                             {user ?
                                 <div className="flex items-center flex-row-reverse gap-4 py-1 px-5 text-silver">
                                     <div className="cursor-pointer">
@@ -97,9 +98,6 @@ const NavbarMain = () => {
                                                 </Link>
                                             </MenuList>
                                         </Menu>
-                                    </div>
-                                    <div>
-                                        <button className="text-navyGray text-2xl"><FaSun /></button>
                                     </div>
                                 </div>
                                 :
