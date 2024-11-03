@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
-import { Navbar, Collapse, Typography, IconButton, Avatar, Menu, MenuHandler, MenuList, MenuItem, Button, } from "@material-tailwind/react";
+import { Navbar, Collapse, Typography, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon, } from "@heroicons/react/24/outline";
 import Logo from "../../Components/Logo/Logo";
 import NavList from "./NavList";
 import useAuth from "../../Hooks/useAuth";
-import { CgProfile } from "react-icons/cg";
-import { CiLogout } from "react-icons/ci";
-import { IoIosLogOut } from "react-icons/io";
 
 import './navbar.css';
 import { Link } from "react-router-dom";
 import DarkMode from "../../Components/darkModeSystem/DarkMode";
+import Profile from "../../Components/navbarContent/Profile";
 
 const NavbarMain = () => {
     const [openNav, setOpenNav] = useState(false);
@@ -69,37 +67,8 @@ const NavbarMain = () => {
                             {/* this is component for dark mode system */}
                             <DarkMode />
                             {user ?
-                                <div className="flex items-center flex-row-reverse gap-4 py-1 px-5 text-silver">
-                                    <div className="cursor-pointer">
-                                        <Menu placement="bottom-end"
-                                            animate={{
-                                                mount: { y: 0 },
-                                                unmount: { y: 25 },
-                                            }}
-                                        >
-                                            <MenuHandler>
-                                                <Button className="p-0 rounded-full bg-transparent">
-                                                    <Avatar
-                                                        className="w-12 h-12 border-2 "
-                                                        src={user?.photoURL}
-                                                        alt="user"
-                                                    />
-                                                </Button>
-                                            </MenuHandler>
-                                            <MenuList className="bg-silver text-navyGray text-[16px] font-poppins font-[400] space-y-5">
-                                                <Link to={'/dashboard'}><MenuItem className="flex items-center gap-1 outline-none hover:border-b border-redBg duration-700 rounded-none">
-                                                    <CgProfile size={20} /> Your Profile</MenuItem>
-                                                </Link>
-                                                <Link to={'/'}><MenuItem className="flex items-center gap-1 outline-none hover:border-b border-redBg duration-700 rounded-none">
-                                                    <IoIosLogOut size={20} />Sign In</MenuItem>
-                                                </Link>
-                                                <Link to={'/'}><MenuItem onClick={logOut} className="flex items-center gap-1 outline-none hover:border-b border-redBg duration-700 rounded-none">
-                                                    <CiLogout size={20} /> Sign Out</MenuItem>
-                                                </Link>
-                                            </MenuList>
-                                        </Menu>
-                                    </div>
-                                </div>
+                            // this is profile drop down component
+                                <Profile />
                                 :
                                 <div>
                                     <Link to={'/signIn'}>

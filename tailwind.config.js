@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -27,6 +27,13 @@ export default {
         redBg: "#A4181B",
       },
       borderColor: {
+        goldRoss: "#B76E79",
+        navyGray: "#4C4C4C",
+        silver: "#C0C0C0",
+        charcoal: "#333333",
+        redBg: "#A4181B",
+      },
+      colors: {
         goldRoss: "#B76E79",
         navyGray: "#4C4C4C",
         silver: "#C0C0C0",

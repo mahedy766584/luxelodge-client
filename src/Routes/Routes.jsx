@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layout/MainLayout";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import Home from "../Pages/Home/Home";
@@ -12,6 +12,11 @@ import SignIn from "../Pages/signIn/SignIn";
 import SignUp from "../Pages/signUp/SignUp";
 import PrivateRoute from "../Components/private/PrivateRoute";
 import DashboardLayout from "../Layout/DashboardLayout";
+import Profile from "../Pages/dashboard/Profile";
+import Booking from "../Pages/dashboard/Booking";
+import AddRoom from "../Pages/dashboard/AddRoom";
+import AllUsers from "../Pages/dashboard/AllUsers";
+import AllBookings from "../Pages/dashboard/AllBookings";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -60,11 +65,31 @@ const myCreatedRouter = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <DashboardLayout/>,
-        errorElement: <ErrorPage/>,
+        element: <DashboardLayout />,
+        errorElement: <ErrorPage />,
         children: [
+            // admin routes
             {
-                // 
+                path: "/dashboard",
+                element: <Profile />
+            },
+            {
+                path: "addRoom",
+                element: <AddRoom />
+            },
+            {
+                path: "allUser",
+                element: <AllUsers />
+            },
+            {
+                path: "allBookings",
+                element: <AllBookings />
+            },
+
+            // user routes
+            {
+                path: "bookings",
+                element: <Booking />
             }
         ]
     }
