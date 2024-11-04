@@ -16,7 +16,7 @@ const Profile = () => {
                 <Avatar
                     variant="circular"
                     alt={user.displayName}
-                    className="cursor-pointer border-2 border-navyGray"
+                    className="cursor-pointer border-2 border-navyGray text-navyGray"
                     src={user.photoURL}
                 />
             </MenuHandler>

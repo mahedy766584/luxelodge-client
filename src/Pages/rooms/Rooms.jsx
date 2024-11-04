@@ -7,14 +7,15 @@ import { IconButton } from "@material-tailwind/react";
 import TitleSection from "../../Components/titleSection/TitleSection";
 import LoadingAnimate from "../../Components/loding/LoadingAnimate";
 import UseTopContent from "../../Hooks/UseTopContent";
-
 import bgTop from "../../assets/aroundImg/around2.jpg";
 import AroundTheHotel from "../../Components/aroundTheHotel/AroundTheHotel";
 import { Helmet } from "react-helmet-async";
+import useAuth from "../../Hooks/useAuth";
 
 const Rooms = () => {
 
     const axiosPublic = useAxiosPublic();
+    const { user } = useAuth();
 
     const getRooms = async (currentPage, limit) => {
         const { data } = await axiosPublic.get(`rooms?page=${currentPage}&limit=${limit}`)
@@ -42,13 +43,13 @@ const Rooms = () => {
 
     return (
         <>
-        <Helmet>
-            <title>LuxeLodge | Rooms</title>
-        </Helmet>
+            <Helmet>
+                <title>LuxeLodge | Rooms</title>
+            </Helmet>
             <div className="mt-16">
                 {/* page off rooms here buy using use top content */}
                 <div>
-                    <UseTopContent bgTop={bgTop} title={'Welcome to (User name)'} />
+                    <UseTopContent bgTop={bgTop} title={user?.displayName} />
                 </div>
                 <Container>
                     <div className="mt-16">

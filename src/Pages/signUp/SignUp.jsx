@@ -10,10 +10,12 @@ import useAuth from "../../Hooks/useAuth";
 import { useState } from "react";
 import { AiTwotoneEye, AiTwotoneEyeInvisible } from "react-icons/ai";
 import { toast } from 'react-toastify';
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 
 const SignUp = () => {
 
+    const axiosPublic = useAxiosPublic();
     const [showPass, setShowPass] = useState(false);
     const { register, handleSubmit, reset, errors } = useForm({
         defaultValues: { email: "Emil", password: "password" }
@@ -23,13 +25,17 @@ const SignUp = () => {
 
     const onSubmit = async (data) => {
         try {
-            console.log(data)
+            // console.log(data)
             const res = await createUser(data.email, data.password)
-            // console.log(res);
             updateUserProfile(data.name)
             reset()
             navigate('/');
             toast.success('Sign Up with Successful...');
+
+            const userInfo = { name: data.name, email: data.email, role: 'user' }
+            const result = await axiosPublic.post('/users', userInfo);
+            console.log('user saved in database ----->>', result.data.message);
+
         } catch (error) {
             console.log(error);
             toast.error(error.message)
@@ -38,10 +44,15 @@ const SignUp = () => {
 
     const handleGoogleLogin = () => {
         googleLoginUser()
-            .then(result => {
+            .then(async (result) => {
                 if (result?.user) {
                     navigate('/')
                     toast.success('Sign In Successful')
+
+                    const userInfo = { name: result.user.displayName, email: result.user.email, role: 'user' }
+                    const res = await axiosPublic.post('/users', userInfo)
+                    console.log('user saved in database ----->>', res.data.message);
+
                 }
             })
             .catch((error) => {
