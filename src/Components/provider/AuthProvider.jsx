@@ -11,10 +11,12 @@ import {
     signInWithEmailAndPassword,
     signInWithPopup,
     signOut,
+    updateEmail,
     updateProfile
 } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null);
 
@@ -54,6 +56,30 @@ const AuthProvider = ({ children }) => {
         });
     };
 
+    const updateRecoverProfile = async (displayName, photoURL, email) => {
+        try {
+
+            if (photoURL.length > 500) {
+                return toast.error('The photo URL is too long. Please use a shorter URL.')
+            }
+
+            updateProfile(auth.currentUser, {
+                displayName: displayName,
+                photoURL: photoURL,
+            });
+
+            if (email && email !== auth.currentUser.email) {
+                await updateEmail(auth.currentUser, email);
+            }
+
+            return { success: true };
+
+        } catch (err) {
+            console.error("প্রোফাইল আপডেট করতে সমস্যা হচ্ছে:", err);
+            return { success: false, err };
+        }
+    }
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
@@ -88,6 +114,7 @@ const AuthProvider = ({ children }) => {
         googleLoginUser,
         logOut,
         updateUserProfile,
+        updateRecoverProfile,
     }
 
     return (

@@ -12,7 +12,7 @@ import "./details.css";
 // import required modules
 import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
 
-const RoomDetailsSlider = ({ images, isAvailable }) => {
+const RoomDetailsSlider = ({ images }) => {
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -35,11 +35,9 @@ const RoomDetailsSlider = ({ images, isAvailable }) => {
                     images?.map((image, index) => (
                         <SwiperSlide key={index}>
                             <div className='relative'>
-                                <img src={image?.url} className='w-full rounded lg:h-full h-[340px] bg-cover bg-center bg-blend-overlay bg-no-repeat' />
-                                <div className='w-full h-full absolute top-0 bg-black bg-opacity-20 flex items-center justify-center bg-cover bg-center bg-blend-overlay bg-no-repeat'>
-                                    <div className='bg-silver absolute top-0 left-0 my-4 bg-opacity-50'>
-                                        <h1 className='px-5 py-2 font-poppins text-xl font-normal text-redBg'>{isAvailable === 'True' && 'Is Available'}</h1>
-                                    </div>
+                                <img src={image} className='w-full rounded lg:h-full h-[340px] bg-cover bg-center bg-blend-overlay bg-no-repeat' />
+                                <div className='w-full h-full absolute top-0 bg-black bg-opacity-30 flex items-center justify-center bg-cover bg-center bg-blend-overlay bg-no-repeat'>
+
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -64,7 +62,7 @@ const RoomDetailsSlider = ({ images, isAvailable }) => {
                     {
                         images?.map((image, index) => (
                             <SwiperSlide key={index}>
-                                <img src={image?.url} className='w-[200px] mx-auto hidden   h-[60px] bg-cover bg-center bg-blend-overlay bg-no-repeat lg:flex justify-center items-center' />
+                                <img src={image} className='w-[200px] mx-auto hidden   h-[60px] bg-cover bg-center bg-blend-overlay bg-no-repeat lg:flex justify-center items-center' />
                             </SwiperSlide>
                         ))
                     }

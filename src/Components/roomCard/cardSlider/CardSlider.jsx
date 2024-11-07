@@ -32,7 +32,7 @@ const CardSlider = ({ images }) => {
                     {
                         images?.map((image, index) => <SwiperSlide key={index}>
                             <div className='relative'>
-                                <img src={image.url} className='object-cover bg-cover bg-center bg-blend-overlay bg-no-repeat w-full h-[300px]' />
+                                <img src={image} className='object-cover bg-cover bg-center bg-blend-overlay bg-no-repeat w-full h-[300px]' />
                                 <div className='absolute w-full h-full bg-black top-0 bg-opacity-20'>
                                     <div className='w-full flex items-center justify-between px-4 py-3'>
                                         <button className='cursor-default bg-silver px-2 py-1 bg-opacity-60 rounded font-poppins font-medium text-redBg'>{image.name}</button>

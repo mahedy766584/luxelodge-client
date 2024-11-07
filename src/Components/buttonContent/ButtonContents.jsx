@@ -6,10 +6,30 @@ import { Rating } from "@material-tailwind/react";
 import RoomsItems from "./RoomsItems";
 import { IoIosArrowForward, IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Button from "../button/Button";
+import useAuth from "../../Hooks/useAuth";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 
 const ButtonContents = ({ roomDetails }) => {
 
+    const { user } = useAuth();
+    const axiosSecure = useAxiosSecure();
+    const navigate = useNavigate();
+
     const { _id, title, roomNumber, pricePerNight, isAvailable, review, description, facilities, images, bathroom, beds, guests } = roomDetails || {};
+
+    const handleBooking = async () => {
+        const bookingInfo = {
+            id: _id, roomTitle: title, roomNumber: roomNumber, pricePerNight, isAvailable, review, roomFacilities: facilities, bathroom, beds, guests, userName: user.displayName, userEmail: user.email,
+        }
+        const res = await axiosSecure.post('/rooms', bookingInfo)
+        console.log('booking data saved in database',res);
+        if(res.data.acknowledged){
+            toast.success('You Room Booked with successful')
+            navigate('/dashboard/bookings')
+        }
+    }
 
     return (
         <Container>
@@ -18,7 +38,7 @@ const ButtonContents = ({ roomDetails }) => {
                 <div className="py-5 space-y-4 text-center lg:text-start">
                     <h1 className="text-4xl font-kanit font-normal text-navyGray">{title}</h1>
                     <div className="flex items-center justify-center lg:justify-start gap-2">
-                        <p className="text-navyGray text-xl font-poppins font-medium">Hotel Room</p> <Rating value={parseInt(review.averageRating)} readonly ratedColor="gray" />
+                        <p className="text-navyGray text-xl font-poppins font-medium">Hotel Room</p> <Rating value={parseInt(review)} readonly ratedColor="gray" />
                     </div>
                 </div>
                 <div className="grid lg:grid-cols-4 gap-10">
@@ -46,12 +66,12 @@ const ButtonContents = ({ roomDetails }) => {
                                         className="flex items-center gap-2 lg:text-start text-center lg:text-xl text-navyGray font-poppins"
                                     >
                                         <IoMdCheckmarkCircleOutline />
-                                        <p>{facility.name}</p>
+                                        <p>{facility}</p>
                                     </span>
                                 ))
                             }
                         </div>
-                        <div className="w-full lg:mt-12 my-10 lg:flex hidden">
+                        <div onClick={handleBooking} className="w-full lg:mt-12 my-10 lg:flex hidden">
                             {/* button component here */}
                             <Button>Book Now</Button>
                         </div>

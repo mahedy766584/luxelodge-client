@@ -25,10 +25,12 @@ const Rooms = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const limit = 4;
 
-    const { data = [], isLoading } = useQuery({
+    const { data = { items: [] }, isLoading } = useQuery({
         queryKey: ['rooms', currentPage],
         queryFn: () => getRooms(currentPage, limit)
     });
+
+    console.log(data);
 
     const rooms = data?.rooms;
     const totalPages = data?.totalPage;

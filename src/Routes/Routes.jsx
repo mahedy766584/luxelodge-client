@@ -17,6 +17,7 @@ import Booking from "../Pages/dashboard/Booking";
 import AddRoom from "../Pages/dashboard/AddRoom";
 import AllUsers from "../Pages/dashboard/AllUsers";
 import AllBookings from "../Pages/dashboard/AllBookings";
+import AdminRoute from "../Components/private/AdminRoute";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -75,15 +76,21 @@ const myCreatedRouter = createBrowserRouter([
             },
             {
                 path: "addRoom",
-                element: <AddRoom />
+                element: <AdminRoute>
+                    <AddRoom />
+                </AdminRoute>
             },
             {
                 path: "allUser",
-                element: <AllUsers />
+                element: <AdminRoute>
+                    <AllUsers />
+                </AdminRoute>
             },
             {
                 path: "allBookings",
-                element: <AllBookings />
+                element: <AdminRoute>
+                    <AllBookings />
+                </AdminRoute>
             },
 
             // user routes

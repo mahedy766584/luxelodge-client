@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet-async";
 const CardDetails = () => {
 
     const roomDetails = useLoaderData();
+    console.log(roomDetails);
 
     return (
         <div>

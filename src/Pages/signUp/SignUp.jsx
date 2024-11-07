@@ -32,7 +32,7 @@ const SignUp = () => {
             navigate('/');
             toast.success('Sign Up with Successful...');
 
-            const userInfo = { name: data.name, email: data.email, role: 'user' }
+            const userInfo = { name: data.name, email: data.email }
             const result = await axiosPublic.post('/users', userInfo);
             console.log('user saved in database ----->>', result.data.message);
 

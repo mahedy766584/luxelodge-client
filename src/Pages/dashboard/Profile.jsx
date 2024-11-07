@@ -4,8 +4,11 @@ import ProfileForm from "./ProfileForm";
 
 const Profile = () => {
     const { user } = useAuth();
+
+
+
     return (
-        <div className="lg:flex gap-8 space-y-10 lg:space-y-0 mb-5 lg:justify-center  lg:items-center">
+        <div className="lg:flex gap-8 lg:mt-8 space-y-10 lg:space-y-0 mb-5 lg:justify-center  lg:items-center">
             {/* profile box */}
             <div className="profile-container">
                 <div className="top-content">
@@ -14,10 +17,9 @@ const Profile = () => {
                         <img src={user?.photoURL} alt={user?.displayName} className="image" />
                     </div>
                 </div>
-                <div className="bottom-content">
+                <div className="bottom-content overflow-hidden">
                     <h1>Name: {user?.displayName}</h1>
                     <h1>Email: <span className="text-base font-normal">{user?.email}</span></h1>
-                    <h1>Email: <span className="text-base font-normal">https://i.ibb.co/QPTz5b4/27.jpg</span></h1>
                 </div>
             </div>
             {/* update box */}

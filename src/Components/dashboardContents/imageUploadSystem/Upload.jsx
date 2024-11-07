@@ -23,12 +23,12 @@ const Upload = ({ isImage, setIsImage }) => {
 
     return (
         <div onClick={handleImageClick} className="w-full cursor-pointer outline-navyGray flex flex-col justify-center items-center outline-dashed  py-6 mt-10 rounded-md h-[200px] relative overflow-hidden">
-            <div className="lg:flex overflow-x-auto gap-5 relative">
+            <div className="lg:flex p-2 gap-5 relative">
                 {
                     isImage.length > 0 ?
                         (
                             isImage.map((image, index) => (
-                                <div className="w-[200px] h-[200px] flex gap-5  overflow-x-auto"
+                                <div className="flex gap-5 py-6"
                                     key={index}>
                                     <img
                                         src={URL.createObjectURL(image)}

@@ -13,6 +13,8 @@ const RoomsCard = ({ room }) => {
 
     // console.log(Object.keys(room).join(","));
 
+    console.log(room);
+
     const { _id, title,  pricePerNight,  review,  images, bathroom, beds, guests } = room || {};
 
     return (
@@ -31,7 +33,7 @@ const RoomsCard = ({ room }) => {
                         {title}
                     </Typography>
                     <button className="flex items-center cursor-default gap-1 bg-yellow-100 text-[#FF5733] px-4 py-1 rounded-full font-bold">
-                        <FaRegStar className="font-bold" /> {review.averageRating}
+                        <FaRegStar className="font-bold" /> {review}
                     </button>
                 </div>
                 <Typography className="text-navyGray lg:text-[24px] tracking-wider font-poppins" variant="h4">
