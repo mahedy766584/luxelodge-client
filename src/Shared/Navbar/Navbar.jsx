@@ -50,7 +50,7 @@ const NavbarMain = () => {
                     ${isHidden ? '-translate-y-full' : 'translate-y-0'} 
                     ${isScrolled ? 'bg-silver' : 'bg-transparent'} `}
             >
-                <Navbar className={`rounded-none border-none bg-silver dark:bg-slate-900 bg-opacity-100 py-2 lg:px-40 font-poppins`}>
+                <Navbar className={`rounded-none border-none dark:shadow-lg dark:shadow-slate-800 bg-silver dark:bg-slate-900 bg-opacity-100 py-2 lg:px-40 font-poppins`}>
                     <div className="flex items-center justify-between  text-blue-gray-9008">
                         <Typography
                             as="a"
@@ -67,7 +67,7 @@ const NavbarMain = () => {
                             {/* this is component for dark mode system */}
                             <DarkMode />
                             {user ?
-                            // this is profile drop down component
+                                // this is profile drop down component
                                 <Profile />
                                 :
                                 <div>
@@ -77,17 +77,20 @@ const NavbarMain = () => {
                                 </div>
                             }
                         </div>
-                        <IconButton
-                            variant="text"
-                            className="lg:hidden"
-                            onClick={() => setOpenNav(!openNav)}
-                        >
-                            {openNav ? (
-                                <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-                            ) : (
-                                <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-                            )}
-                        </IconButton>
+                        <div className="flex items-center lg:hidden">
+                            <DarkMode />
+                            <IconButton
+                                variant="text"
+                                className="lg:hidden dark:text-silver"
+                                onClick={() => setOpenNav(!openNav)}
+                            >
+                                {openNav ? (
+                                    <XMarkIcon className="h-8 w-8" strokeWidth={2} />
+                                ) : (
+                                    <Bars3Icon className="h-8 w-8" strokeWidth={2} />
+                                )}
+                            </IconButton>
+                        </div>
                     </div>
                     <Collapse open={openNav}>
                         <NavList />

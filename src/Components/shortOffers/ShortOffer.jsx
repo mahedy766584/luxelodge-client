@@ -1,7 +1,6 @@
-import offersVideo1 from "../../assets/offersVido/offersVideo.mp4";
+import offersVideo1 from "../../assets/heroVideo/video3.mp4";
 import Container from "../Container/Container"
 import OffersContent from "./OffersContent";
-
 
 const ShortOffer = () => {
     return (
