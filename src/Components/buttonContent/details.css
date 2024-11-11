@@ -1,11 +1,69 @@
-
 .mySwiper .swiper-slide {
     width: 25%;
     height: 100%;
     /* opacity: 0.4; */
-} 
+}
 
 .mySwiper .swiper-slide-thumb-active {
     opacity: 1;
     border: 2px solid #4C4C4C;
+}
+
+/* customDateRange.css */
+
+.custom-date-range .rdrCalendarWrapper {
+    @apply bg-silver 
+    /* ক্যালেন্ডারের ব্যাকগ্রাউন্ড রঙ এবং আকার */
+}
+
+.custom-date-range .rdrMonth {
+    @apply bg-white rounded-md;
+    /* প্রতিটি মাসের জন্য */
+}
+
+.custom-date-range .rdrDayNumber span {
+    @apply text-red-600 font-semibold;
+    /* তারিখের রঙ এবং ফন্ট স্টাইল */
+}
+
+.custom-date-range .rdrSelected {
+    @apply bg-red-500 text-white;
+    /* নির্বাচিত তারিখের জন্য */
+}
+
+.custom-date-range .rdrInRange {
+    @apply bg-red-600;
+    /* নির্বাচিত তারিখ রেঞ্জের জন্য */
+}
+
+.custom-date-range .rdrDayDisabled span {
+    @apply text-gray-400;
+    /* নিষ্ক্রিয় (ডিসেবলড) তারিখের রঙ */
+}
+
+/* customDateRange.css */
+
+.custom-date-range .rdrCalendarWrapper {
+    @apply  rounded;
+    /* পুরো ক্যালেন্ডারের ব্যাকগ্রাউন্ড */
+}
+
+.custom-date-range .rdrMonthAndYearWrapper {
+    @apply bg-silver text-white flex justify-between items-center p-2 rounded-t;
+    /* হেডার অংশের ব্যাকগ্রাউন্ড এবং ফন্ট রঙ */
+}
+
+.custom-date-range .rdrMonthAndYearPickers select {
+    @apply bg-transparent  font-semibold;
+    /* মাস ও বছরের ড্রপডাউন */
+}
+
+.custom-date-range .rdrMonthAndYearPickers select:focus {
+    @apply outline-none;
+    /* ফোকাস অবস্থায় আউটলাইন অপসারণ */
+}
+
+.custom-date-range .rdrMonthAndYearNavigationButton {
+    @apply text-white hover:text-gray-200;
+    /* নেভিগেশন বোতাম স্টাইল */
 }

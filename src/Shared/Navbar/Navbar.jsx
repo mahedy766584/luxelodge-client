@@ -91,7 +91,7 @@ const NavbarMain = () => {
                     </div>
                     <Collapse open={openNav}>
                         <NavList />
-                        <div className="flex w-full flex-nowrap items-center gap-x-4 lg:hidden">
+                        <div className="flex w-full flex-nowrap py-6 items-center justify-center gap-x-4 lg:hidden">
                             {user ?
                                 <div onClick={logOut} className="cursor-pointer">
                                     <button className="btn btn4">Sign Out</button>

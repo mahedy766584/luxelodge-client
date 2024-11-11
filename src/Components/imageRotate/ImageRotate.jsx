@@ -6,25 +6,24 @@ import ReactPannellum, { getConfig } from "react-pannellum";
 const ImageRotate = ({ rotateImg }) => {
 
     const config = {
-        autoRotate: -2,
+        autoRotate: -1,
         pitch: 10,
-        yaw: 250,
-        hfov: 130,
+        yaw: 10,
+        hfov: 500,
         minHfov: 50,
-        maxHfov: 190,
+        maxHfov: 120,
         minPitch: -30,
         maxPitch: 30,
         autoLoad: true,
-        width: "100%",
-        height: "100%",
         showZoomCtrl: false,
         showFullscreenCtrl: false,
     };
+
     const customStyle = {
         width: "100%",
         height: "100%",
         backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundBlendMode: "overlay",
     };

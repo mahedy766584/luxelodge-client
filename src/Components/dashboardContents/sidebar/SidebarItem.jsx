@@ -8,6 +8,7 @@ import useAuth from "../../../Hooks/useAuth";
 import { MdBedroomParent } from "react-icons/md";
 import { FaUsers } from "react-icons/fa6";
 import useAdmin from "../../../Hooks/useAdmin";
+import { RiEditCircleFill } from "react-icons/ri";
 
 
 const SidebarItem = ({ sidebarOpen }) => {
@@ -51,6 +52,16 @@ const SidebarItem = ({ sidebarOpen }) => {
                                     }
                                 >
                                     <span className="flex items-center gap-2 w-full hover:bg-navyGray hover:text-silver text-xl px-5 py-1.5 rounded duration-700"><FaCartFlatbed />Bookings</span>
+                                </NavLink>
+                            </List>
+                            <List className=" text-navyGray">
+                                <NavLink
+                                    to="/dashboard/manageRoom"
+                                    className={({ isActive, isPending }) =>
+                                        isPending ? "pending" : isActive ? "bg-navyGray w-full px-0 rounded flex text-silver justify-start items-center" : ""
+                                    }
+                                >
+                                    <span className="flex items-center gap-2 w-full hover:bg-navyGray hover:text-silver text-xl px-5 py-1.5 rounded duration-700"><RiEditCircleFill />Manage Room</span>
                                 </NavLink>
                             </List>
                         </>

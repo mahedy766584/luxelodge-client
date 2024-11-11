@@ -4,18 +4,15 @@ import RoomsCard from "../../Components/roomCard/RoomsCard";
 import Container from "../../Components/Container/Container";
 import { useState } from "react";
 import { IconButton } from "@material-tailwind/react";
-import TitleSection from "../../Components/titleSection/TitleSection";
 import LoadingAnimate from "../../Components/loding/LoadingAnimate";
 import UseTopContent from "../../Hooks/UseTopContent";
-import bgTop from "../../assets/aroundImg/around2.jpg";
+import bgTop from "../../assets/aroundImg/around4.jpg";
 import AroundTheHotel from "../../Components/aroundTheHotel/AroundTheHotel";
 import { Helmet } from "react-helmet-async";
-import useAuth from "../../Hooks/useAuth";
 
 const Rooms = () => {
 
     const axiosPublic = useAxiosPublic();
-    const { user } = useAuth();
 
     const getRooms = async (currentPage, limit) => {
         const { data } = await axiosPublic.get(`rooms?page=${currentPage}&limit=${limit}`)
@@ -51,13 +48,14 @@ const Rooms = () => {
             <div className="mt-16">
                 {/* page off rooms here buy using use top content */}
                 <div>
-                    <UseTopContent bgTop={bgTop} title={user?.displayName} />
+                    <UseTopContent
+                        bgTop={bgTop}
+                        title={'Escape to Comfort: Explore Our Luxurious Rooms'}
+                        subTitle={'"Indulge in ultimate comfort with our elegantly designed rooms, tailored to offer you a restful and memorable stay."'}
+                    />
                 </div>
                 <Container>
                     <div className="mt-16">
-                        {/* title section here */}
-                        <TitleSection title={'Escape to Comfort: Explore Our Luxurious Rooms'} subTitle={'"Indulge in ultimate comfort with our elegantly designed rooms, tailored to offer you a restful and memorable stay."'} />
-
                         {/* hotel room card */}
                         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
                             {

@@ -45,6 +45,8 @@ const AddRoomFrom = () => {
 
     const onSubmit = async (data) => {
 
+        setIsLoading(true)
+
         const imagesUrls = await uploadImagesToImgBB(isImage);
 
         const roomInfo = {
@@ -77,6 +79,8 @@ const AddRoomFrom = () => {
         } catch (error) {
             console.log(error.message);
             toast.error(error.message)
+        } finally {
+            setIsLoading(false)
         }
 
     };
@@ -234,7 +238,7 @@ const AddRoomFrom = () => {
                 </div>
                 <div className="w-full mt-10">
                     <button
-                        onClick={() => setIsLoading(!isLoading)}
+                        // onClick={() => setIsLoading(!isLoading)}
                         type="submit"
                         className="w-full bg-navyGray hover:shadow-lg text-silver mt-7 py-3 font-medium font-poppins rounded-md flex justify-center items-center
                     ">

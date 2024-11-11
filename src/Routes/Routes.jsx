@@ -18,6 +18,8 @@ import AddRoom from "../Pages/dashboard/AddRoom";
 import AllUsers from "../Pages/dashboard/AllUsers";
 import AllBookings from "../Pages/dashboard/AllBookings";
 import AdminRoute from "../Components/private/AdminRoute";
+import ManageRooms from "../Pages/dashboard/ManageRooms";
+// import BookingForm from "../Pages/BookingForm/BookingForm";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -54,6 +56,13 @@ const myCreatedRouter = createBrowserRouter([
                 element: <PrivateRoute><CardDetails /></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
             },
+            // {
+            //     path: "/bookingForm/:id",
+            //     element: <PrivateRoute>
+            //         <BookingForm />
+            //     </PrivateRoute>,
+            //     loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+            // },
             {
                 path: "/signIn",
                 element: <SignIn />
@@ -91,6 +100,10 @@ const myCreatedRouter = createBrowserRouter([
                 element: <AdminRoute>
                     <AllBookings />
                 </AdminRoute>
+            },
+            {
+                path: "manageRoom",
+                element: <ManageRooms />
             },
 
             // user routes

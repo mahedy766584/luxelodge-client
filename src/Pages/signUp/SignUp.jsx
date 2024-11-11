@@ -17,8 +17,8 @@ const SignUp = () => {
 
     const axiosPublic = useAxiosPublic();
     const [showPass, setShowPass] = useState(false);
-    const { register, handleSubmit, reset, errors } = useForm({
-        defaultValues: { email: "Emil", password: "password" }
+    const { register, handleSubmit, reset } = useForm({
+        defaultValues: { email: "Email", password: "password" }
     });
     const { createUser, googleLoginUser, updateUserProfile } = useAuth();
     const navigate = useNavigate();

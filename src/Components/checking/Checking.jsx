@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -43,37 +44,37 @@ const Checking = () => {
     }
 
     return (
-        <div className='bg-silver py-10 border-l-4 border-silver rounded-md shadow-xl lg:flex items-center gap-6 space-y-6 lg:space-y-0 px-8 font-kanit'>
+        <div className='bg-silver dark:bg-slate-950 py-10 border-l-4 border-silver rounded-md shadow-xl dark:shadow-silver dark:shadow lg:flex items-center gap-6 space-y-6 lg:space-y-0 px-8 font-kanit'>
             <div>
-                <h1 className='uppercase font-medium text-navyGray'>Check-In</h1>
+                <h1 className='uppercase font-medium text-navyGray dark:text-silver'>Check-In</h1>
                 <div className='flex items-center gap-2 border-b border-navyGray bg-black bg-opacity-5 rounded-t-md'>
-                    <CiCalendarDate className='text-navyGray text-xl font-medium' />
+                    <CiCalendarDate className='text-navyGray text-xl dark:text-silver font-medium' />
                     <DatePicker
                         selected={checkingDate}
                         onChange={handleCheckingChange}
                         minDate={new Date()}
                         dateFormat={'MMMM d, yyyy'}
-                        className='outline-none border-none text-navyGray py-3 bg-transparent'
+                        className='outline-none border-none text-navyGray dark:text-silver py-3 bg-transparent'
                     />
                 </div>
             </div>
             <div>
-                <h1 className='uppercase font-medium text-navyGray'>Check-Out</h1>
-                <div className='flex items-center gap-2 border-b border-navyGray bg-black bg-opacity-5 rounded-t-md'>
-                    <CiCalendarDate className='text-navyGray text-xl font-medium' />
+                <h1 className='uppercase font-medium text-navyGray dark:text-silver'>Check-Out</h1>
+                <div className='flex items-center gap-2 border-b border-navyGray dark:text-silver bg-black bg-opacity-5 rounded-t-md'>
+                    <CiCalendarDate className='text-navyGray dark:text-silver text-xl font-medium' />
                     <DatePicker
                         selected={checkoutDate}
                         onChange={handleCheckoutChange}
                         minDate={new Date()}
                         dateFormat={'MMMM d, yyyy'}
-                        className='outline-none border-none text-navyGray py-3 bg-transparent'
+                        className='outline-none border-none dark:text-silver text-navyGray py-3 bg-transparent'
                     />
                 </div>
             </div>
             <div>
-                <h1 className='uppercase font-medium text-navyGray'>Guest</h1>
-                <div className='flex items-center gap-2 border-b border-navyGray bg-black bg-opacity-5 text-navyGray rounded-t-md'>
-                    <button onClick={decrementGuestCount} className='text-3xl'>
+                <h1 className='uppercase font-medium text-navyGray dark:text-silver'>Guest</h1>
+                <div className='flex items-center gap-2 border-b border-navyGray dark:text-silver bg-black bg-opacity-5 text-navyGray rounded-t-md'>
+                    <button onClick={decrementGuestCount} className='text-3xl dark:text-silver'>
                         <CiCircleMinus />
                     </button>
                     <input

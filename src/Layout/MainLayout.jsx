@@ -21,7 +21,7 @@ const MainLayout = () => {
         <>
             {
                 isLoading ? <MainLoading /> :
-                    <div className="duration-700 dark:bg-slate-900">
+                    <div className="duration-700 dark:bg-slate-950">
                         <div>
                             {noHeaderFooter || <NavbarMain />}
                         </div>
