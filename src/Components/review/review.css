@@ -10,10 +10,10 @@
     margin: 0 10px;
 }
 
-/* .slick-prev,
+.slick-prev,
 .slick-next {
-    padding: -60px;
-} */
+    display: none;
+}
 
 .slick-prev:before,
 .slick-next:before {

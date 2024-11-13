@@ -14,7 +14,7 @@ const Content = () => {
                     <div className="flex  flex-col lg:justify-start lg:items-start items-center">
                         <Logo />
                         <div className="h-48">
-                            <p className="font-normal text-lg text-navyWhite w-[400px]">"Discover LuxeLodge – your gateway to exceptional hotel experiences. Stay with us and enjoy premium service, comfort, and unforgettable stays."</p>
+                            <p className="font-normal text-lg text-navyWhite lg:w-[400px]">"Discover LuxeLodge – your gateway to exceptional hotel experiences. Stay with us and enjoy premium service, comfort, and unforgettable stays."</p>
                         </div>
                     </div>
                     <div className="flex flex-col space-y-6 lg:mt-5">

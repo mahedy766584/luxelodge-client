@@ -22,7 +22,7 @@ import image8 from "../../assets/aboutImage/image8.jpg";
 const AboutSlider = () => {
     return (
         <>
-            <Swiper style={{ width: '520px', height: '560px', borderRadius: '10px' }}
+            <Swiper 
                 grabCursor={true}
                 effect={'creative'}
                 autoplay={{
@@ -38,56 +38,56 @@ const AboutSlider = () => {
                         shadow: true,
                         translate: ['120%', 0, -500],
                     },
-                }}
+                }}  
                 modules={[EffectCreative, Autoplay]}
-                className="mySwiper2 max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-64 md:h-72 lg:h-80 xl:h-96"
+                className="mySwiper2 lg:w-[500px] w-full h-[560px]"
             >
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image1} />
-                        <div className='bg-black w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image1} />
+                        <div className='bg-black w-full rounded-md h-full absolute top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image2} />
-                        <div className='bg-silver w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image2} />
+                        <div className='bg-silver w-full h-full absolute rounded-md top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image3} />
-                        <div className='bg-black w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image3} />
+                        <div className='bg-black w-full rounded-md h-full absolute top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image4} />
-                        <div className='bg-black w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image4} />
+                        <div className='bg-black rounded-md w-full h-full absolute top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image5} />
-                        <div className='bg-black w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image5} />
+                        <div className='bg-black rounded-md w-full h-full absolute top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image6} />
-                        <div className='bg-black w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image6} />
+                        <div className='bg-black rounded-md w-full h-full absolute top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image7} />
-                        <div className='bg-black w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image7} />
+                        <div className='bg-black rounded-md w-full h-full absolute top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full h-full relative'>
-                        <img className='w-full rounded-md h-full object-cover' src={image8} />
-                        <div className='bg-black w-full h-full absolute top-0 bg-opacity-30'></div>
+                        <img className='w-full rounded-md h-full bg-contain bg-center bg-no-repeat bg-blend-overlay' src={image8} />
+                        <div className='bg-black rounded-md w-full h-full absolute top-0 bg-opacity-30'></div>
                     </div>
                 </SwiperSlide>
             </Swiper>

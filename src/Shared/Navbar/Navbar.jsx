@@ -50,8 +50,8 @@ const NavbarMain = () => {
                     ${isHidden ? '-translate-y-full' : 'translate-y-0'} 
                     ${isScrolled ? 'bg-silver' : 'bg-transparent'} `}
             >
-                <Navbar className={`rounded-none border-none dark:shadow-lg dark:shadow-slate-800 bg-silver dark:bg-slate-900 bg-opacity-100 py-2 lg:px-40 font-poppins`}>
-                    <div className="flex items-center justify-between  text-blue-gray-9008">
+                <Navbar className={`rounded-none border-none dark:shadow-lg dark:shadow-slate-800 bg-silver dark:bg-slate-900 bg-opacity-100 py-2 lg:px-40 font-poppins max-w-[1920px]`}>
+                    <div className="flex items-center justify-between w-full text-blue-gray-9008">
                         <Typography
                             as="a"
                             href="/"
@@ -65,7 +65,6 @@ const NavbarMain = () => {
                         </div>
                         <div className="hidden flex-wrap items-center gap-2 lg:flex">
                             {/* this is component for dark mode system */}
-                            <DarkMode />
                             {user ?
                                 // this is profile drop down component
                                 <Profile />
@@ -78,7 +77,6 @@ const NavbarMain = () => {
                             }
                         </div>
                         <div className="flex items-center lg:hidden">
-                            <DarkMode />
                             <IconButton
                                 variant="text"
                                 className="lg:hidden dark:text-silver"
@@ -94,6 +92,7 @@ const NavbarMain = () => {
                     </div>
                     <Collapse open={openNav}>
                         <NavList />
+                        <div className="flex justify-center items-center"><DarkMode /></div>
                         <div className="flex w-full flex-nowrap py-6 items-center justify-center gap-x-4 lg:hidden">
                             {user ?
                                 <div onClick={logOut} className="cursor-pointer">

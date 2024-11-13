@@ -11,11 +11,11 @@ const DarkMode = () => {
             {
                 mode === "light" ?
                     <button onClick={changeThem} className="text-navyGray text-2xl">
-                        <IoIosSunny size={35} className={`dark:text-silver`}/>
+                        <IoIosSunny size={30} className={`dark:text-silver`}/>
                     </button>
                     :
                     <button onClick={changeThem} className="text-navyGray text-2xl">
-                        <IoMoonSharp size={35} className="dark:text-silver"/>
+                        <IoMoonSharp size={30} className="dark:text-silver"/>
                     </button>
             }
         </div>

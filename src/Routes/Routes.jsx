@@ -19,7 +19,6 @@ import AllUsers from "../Pages/dashboard/AllUsers";
 import AllBookings from "../Pages/dashboard/AllBookings";
 import AdminRoute from "../Components/private/AdminRoute";
 import ManageRooms from "../Pages/dashboard/ManageRooms";
-// import BookingForm from "../Pages/BookingForm/BookingForm";
 
 const myCreatedRouter = createBrowserRouter([
     {
@@ -54,15 +53,8 @@ const myCreatedRouter = createBrowserRouter([
             {
                 path: "/cartDetails/:id",
                 element: <PrivateRoute><CardDetails /></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
+                loader: ({ params }) => fetch(`https://server-seven-ashen.vercel.app/rooms/${params.id}`)
             },
-            // {
-            //     path: "/bookingForm/:id",
-            //     element: <PrivateRoute>
-            //         <BookingForm />
-            //     </PrivateRoute>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/rooms/${params.id}`)
-            // },
             {
                 path: "/signIn",
                 element: <SignIn />

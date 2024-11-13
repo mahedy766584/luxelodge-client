@@ -10,6 +10,7 @@ import { useState } from "react";
 import { AiTwotoneEye, AiTwotoneEyeInvisible } from "react-icons/ai";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const SignIn = () => {
 
@@ -18,6 +19,7 @@ const SignIn = () => {
         defaultValues: { email: "emil", password: "password" }
     });
     const { loginWithUser, googleLoginUser } = useAuth();
+    const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
@@ -38,14 +40,19 @@ const SignIn = () => {
 
     const handleGoogleLogin = () => {
         googleLoginUser()
-            // eslint-disable-next-line no-unused-vars
-            .then(res => {
-                // console.log(res.user);
-                toast.success('Login Successful');
-                navigate(from, { replace: true });
+            .then(async (result) => {
+                if (result?.user) {
+                    navigate('/')
+                    toast.success('Sign In Successful')
+
+                    const userInfo = { name: result.user.displayName, email: result.user.email, role: 'user' }
+                    const res = await axiosPublic.post('/users', userInfo)
+                    console.log('user saved in database ----->>', res.data.message);
+
+                }
             })
-            .catch(err => {
-                console.log(err.message);
+            .catch((error) => {
+                toast.error(error.message)
             })
     }
 

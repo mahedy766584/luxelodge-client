@@ -28,7 +28,7 @@ const RoomsCard = ({ room }) => {
                 <CardSlider images={images} />
             </CardHeader>
             <CardBody className="space-y-4 rounded-t-lg">
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center gap-4">
                     <Typography className="text-navyGray font-kanit lg:text-[26px] tracking-wider" variant="h4">
                         {title}
                     </Typography>

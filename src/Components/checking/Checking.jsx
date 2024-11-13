@@ -44,10 +44,10 @@ const Checking = () => {
     }
 
     return (
-        <div className='bg-silver dark:bg-slate-950 py-10 border-l-4 border-silver rounded-md shadow-xl dark:shadow-silver dark:shadow lg:flex items-center gap-6 space-y-6 lg:space-y-0 px-8 font-kanit'>
-            <div>
+        <div className='bg-silver md:px-6 dark:bg-slate-950 py-10 border-l-4 border-silver rounded-md shadow-xl dark:shadow-silver dark:shadow lg:flex items-center justify-center lg:gap-6 space-y-7 lg:space-y-0 lg:px-6 font-kanit  px-1'>
+            <div className='w-full'>
                 <h1 className='uppercase font-medium text-navyGray dark:text-silver'>Check-In</h1>
-                <div className='flex items-center gap-2 border-b border-navyGray bg-black bg-opacity-5 rounded-t-md'>
+                <div className='flex w-full items-center gap-2 border-b border-navyGray bg-black bg-opacity-5 lg:px-2 rounded-t-md'>
                     <CiCalendarDate className='text-navyGray text-xl dark:text-silver font-medium' />
                     <DatePicker
                         selected={checkingDate}
@@ -60,7 +60,7 @@ const Checking = () => {
             </div>
             <div>
                 <h1 className='uppercase font-medium text-navyGray dark:text-silver'>Check-Out</h1>
-                <div className='flex items-center gap-2 border-b border-navyGray dark:text-silver bg-black bg-opacity-5 rounded-t-md'>
+                <div className='flex  items-center gap-2 border-b border-navyGray dark:text-silver  bg-black bg-opacity-5 lg:px-2 rounded-t-md'>
                     <CiCalendarDate className='text-navyGray dark:text-silver text-xl font-medium' />
                     <DatePicker
                         selected={checkoutDate}
@@ -71,9 +71,9 @@ const Checking = () => {
                     />
                 </div>
             </div>
-            <div>
+            <div className='md:w-96 sm:96 relative'>
                 <h1 className='uppercase font-medium text-navyGray dark:text-silver'>Guest</h1>
-                <div className='flex items-center gap-2 border-b border-navyGray dark:text-silver bg-black bg-opacity-5 text-navyGray rounded-t-md'>
+                <div className='flex items-center gap-2 lg:px-2 relative border-b border-navyGray dark:text-silver bg-black bg-opacity-5 text-navyGray rounded-t-md '>
                     <button onClick={decrementGuestCount} className='text-3xl dark:text-silver'>
                         <CiCircleMinus />
                     </button>
@@ -81,16 +81,16 @@ const Checking = () => {
                         onChange={(e) => setGuestCount(e.target.value)}
                         value={guestCount}
                         type="number"
-                        className='outline-none px-4 py-3 bg-transparent'
+                        className='outline-none  py-3 px-8 bg-transparent'
                     />
-                    <button onClick={incrementGuestCount} className='text-3xl'>
+                    <button onClick={incrementGuestCount} className='text-3xl absolute right-0'>
                         <CiCirclePlus />
                     </button>
                 </div>
             </div>
-            <div className='w-full'>
+            <div className='w-full mb-4'>
                 <button onClick={checkAvailability}
-                    className="relative w-full overflow-hidden mb-6 font-medium border-2 border-redBg py-3 px-10 bg-silver hover:text-silver duration-300 top-6 text-navyGray  group">
+                    className="relative w-full overflow-hidden mb-6 font-medium border-2 border-redBg py-3 lg:px-10 bg-silver hover:text-silver duration-300 top-6 text-navyGray  group">
                     <span className="relative z-10 uppercase">Check Availability</span>
                     <div className="absolute inset-0 bg-redBg transition-all duration-500 ease-out group-hover:translate-x-0 origin-center left-[50%] right-[50%] group-hover:left-0 group-hover:right-0 "></div>
                 </button>

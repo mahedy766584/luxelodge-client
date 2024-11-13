@@ -54,7 +54,7 @@ const HeroContent = () => {
                         </div>
                     </div>
                 </div>
-                <div className='z-40 absolute lg:-bottom-20 -bottom-96 w-full mx-auto flex justify-center items-center'>
+                <div className='z-40 absolute lg:-bottom-20 md:-bottom-96 -bottom-96 w-full mx-auto flex justify-center items-center'>
                     <Checking />
                 </div>
             </div>

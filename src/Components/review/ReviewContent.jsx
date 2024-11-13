@@ -39,7 +39,8 @@ const ReviewContent = () => {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                    dots: true
+                    dots: false,
+                    arrows: false
                 }
             },
             {
@@ -47,14 +48,32 @@ const ReviewContent = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    initialSlide: 1
+                    initialSlide: 1,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    arrows: false,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 360,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
                 }
             }
         ]
@@ -71,7 +90,7 @@ const ReviewContent = () => {
                                 className="card relative w-full h-[360px] font-poppins bg-silver m-5 rounded-2xl overflow-hidden shadow-xl"
                             >
                                 <div className="circle bg-navyGray flex justify-center relative">
-                                    <div className="flex flex-col absolute top-0 items-center p-4">
+                                    <div className="flex flex-col absolute top-0 items-center py-5">
                                         <div className="rounded-full border-[3px]">
                                             <img src={review?.image} alt={review?.name} className="rounded-full w-32 h-32" />
                                         </div>
