@@ -1,17 +1,14 @@
 import { useState } from "react";
 import Navbar from "../Components/dashboardContents/navbar/Navbar";
-import Sidebar from "../Components/dashboardContents/sidebar/Sidebar";
 import { Helmet } from "react-helmet-async";
-import TopSidebar from "../Components/dashboardContents/sidebar/TopSidebar";
 import { Outlet } from "react-router-dom";
+import Sidebar from "../Components/dashboardContents/sidebar/Sidebar";
 
 const DashboardLayout = () => {
 
-    const [sidebarOpen, setSidebarOpen] = useState(true);
-    const [openTop, setOpenTop] = useState(false);
-
-    const openDrawerTop = () => setOpenTop(true);
-    const closeDrawerTop = () => setOpenTop(false);
+    const [open, setOpen] = useState(false);
+    const openDrawer = () => setOpen(true);
+    const closeDrawer = () => setOpen(false);
 
 
     return (
@@ -19,26 +16,24 @@ const DashboardLayout = () => {
             <Helmet>
                 <title>LuxeLodge | Dashboard</title>
             </Helmet>
-            <div className="">
-                <div className="relative flex h-full">
-                    <div className="lg:block hidden">
-                        <Sidebar
-                            sidebarOpen={sidebarOpen}
-                            setSidebarOpen={setSidebarOpen}
+            <div className="flex flex-col">
+                <div className="relative flex flex-col ">
+                    <div className=" ">
+                        <Navbar openDrawer={openDrawer}
                         />
                     </div>
-                    <div className="flex flex-col relative w-full">
-                        <TopSidebar
-                            openDrawerTop={openDrawerTop}
-                            closeDrawerTop={closeDrawerTop}
-                            openTop={openTop}
-                        />
-                        <Navbar
-                            sidebarOpen={sidebarOpen}
-                            setSidebarOpen={setSidebarOpen}
-                            openDrawerTop={openDrawerTop}
-                        />
-                        <div className="relative px-8 ">
+                    <div className="flex relative w-full">
+                        <div>
+                            <div className="">
+                                <Sidebar
+                                    open={open}
+                                    setOpen={setOpen}
+                                    openDrawer={openDrawer}
+                                    closeDrawer={closeDrawer}
+                                />
+                            </div>
+                        </div>
+                        <div className="relative flex justify-center mx-auto items-center px-8 ">
                             <Outlet />
                         </div>
                     </div>

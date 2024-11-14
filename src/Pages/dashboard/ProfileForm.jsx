@@ -25,7 +25,7 @@ const ProfileForm = () => {
     return (
         <div>
             <Card color="transparent" shadow={false}>
-                <form onSubmit={handleSubmit(onSubmit)} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96 mx-auto">
+                <form onSubmit={handleSubmit(onSubmit)} className="mt-8 w-full px-2 mb-2 lg:w-80 lg:max-w-screen-lg sm:w-80 mx-auto">
                     <div className="mb-1 flex flex-col gap-6">
                         <Typography variant="h6" color="blue-gray" className="-mb-3">
                             Your Name
@@ -34,7 +34,7 @@ const ProfileForm = () => {
                             {...register("displayName", { required: true })}
                             defaultValue={user?.displayName}
                             type="text"
-                            className="bg-transparent border border-navyGray py-2.5 text-navyGray text-lg px-4 rounded outline-none"
+                            className="bg-transparent border border-navyGray py-2.5 px-2 text-navyGray text-lg lg:px-4 rounded outline-none"
                         />
                         <Typography variant="h6" color="blue-gray" className="-mb-3">
                             Your Photo
@@ -43,7 +43,7 @@ const ProfileForm = () => {
                             {...register("photoURL", { required: true })}
                             defaultValue={user?.photoURL}
                             type="text"
-                            className="bg-transparent border border-navyGray py-2.5 text-navyGray text-lg px-4 rounded outline-none"
+                            className="bg-transparent border border-navyGray py-2.5 text-navyGray px-2 text-lg lg:px-4 rounded outline-none"
                         />
                         <Typography variant="h6" color="blue-gray" className="-mb-3">
                             Email
@@ -52,10 +52,10 @@ const ProfileForm = () => {
                             {...register("email", { required: true })}
                             defaultValue={user?.email}
                             type="email"
-                            className="bg-transparent border border-navyGray py-2.5 text-navyGray text-lg px-4 rounded outline-none"
+                            className="bg-transparent border border-navyGray py-2.5 px-2 text-navyGray text-lg l:px-4 rounded outline-none"
                         />
                     </div>
-                    <Button type="submit" className="mt-6 bg-navyGray" fullWidth>
+                    <Button type="submit" className="mt-6 bg-navyGray lg:w-full" fullWidth>
                         Update
                     </Button>
                 </form>

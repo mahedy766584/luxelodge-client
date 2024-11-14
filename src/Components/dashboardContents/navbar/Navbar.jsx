@@ -1,29 +1,20 @@
 /* eslint-disable react/prop-types */
 import DarkMode from "../../../Components/darkModeSystem/DarkMode";
 import { CiSearch } from "react-icons/ci";
-import { FaBars } from "react-icons/fa";
-import { IoIosArrowRoundForward, IoIosArrowRoundBack } from "react-icons/io";
+import { HiOutlineBars4 } from "react-icons/hi2";
+import Logo from "../../Logo/Logo";
 
-const Navbar = ({ sidebarOpen, setSidebarOpen, openDrawerTop }) => {
+const Navbar = ({ openDrawer }) => {
 
     return (
-        <div className="h-16 px-6 flex items-center lg:justify-end justify-between dark:bg-slate-900 w-full">
-            <div className="cursor-pointer hidden bg-silver absolute left-0 px-2 lg:flex justify-center items-center rounded-r-full">
-                {
-                    sidebarOpen === false ?
-                        <button onClick={() => setSidebarOpen(!sidebarOpen)} className=" text-navyGray">
-                            <IoIosArrowRoundForward size={35} />
-                        </button>
-                        :
-                        <button onClick={() => setSidebarOpen(!sidebarOpen)} className="text-navyGray">
-                            <IoIosArrowRoundBack size={35} />
-                        </button>
-                }
-            </div>
-            <div className="cursor-pointer lg:hidden block">
-                <button onClick={openDrawerTop}>
-                    <FaBars size={35} className="text-silver" />
+        <div className="h-16 px-6 flex items-center justify-between dark:bg-slate-900 w-full">
+            <div className="flex items-center gap-2">
+                <button
+                    onClick={openDrawer}
+                    className="bg-transparent p-1 hover:bg-opacity-40 duration-500 rounded-full text-navyGray shadow-none hover:bg-navyGray">
+                    <HiOutlineBars4 size={35} />
                 </button>
+                <Logo />
             </div>
             <div className="flex items-center gap-5">
                 <div className="lg:flex hidden items-center border w-full px-4 border-navyGray border-opacity-50 rounded-md group:">

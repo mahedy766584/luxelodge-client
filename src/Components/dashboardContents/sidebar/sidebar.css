@@ -19,5 +19,5 @@
 }
 
 .bottom-content{
-    @apply flex px-4 flex-col justify-center items-center mt-16 font-poppins relative text-xl space-y-4 font-medium text-navyGray text-center
+    @apply flex lg:px-4 flex-col justify-center items-center mt-16 font-poppins relative text-xl space-y-4 font-medium text-navyGray text-center
 }
