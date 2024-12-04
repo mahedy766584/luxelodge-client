@@ -54,4 +54,5 @@ It also supports hotel administrators with tools to manage room listings, offers
 | **Payment**                     | Stripe Payment API                                   |
 | **Authentication**              | Firebase Auth                                        |
 | **Media**                       | ReactPannellum for 360-degree interactive images     |
+| **Component Livery**            | Material Tailwind                                    |
 
