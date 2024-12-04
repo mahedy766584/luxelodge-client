@@ -43,7 +43,15 @@ It also supports hotel administrators with tools to manage room listings, offers
 3. **Booking Analytics**
 - Track room bookings and generate insights (future enhancement).
 
-## **Technologies Used
-| Category                        | Technologies                                    |
-|:--------------------------------|:-----------------------------------------------:|
-| Frontend	                      | React.js, Tailwind CSS
+## Technologies Used
+| **Category**                    | **Technologies**                                     |
+|---------------------------------|------------------------------------------------------|
+| **Frontend**                    | React.js, Tailwind CSS                               |
+| **Backend**                     | Node.js, Express.js                                  |
+| **Database**                    | MongoDB                                              |
+| **State Management**            | Context API, TanStack Query                          |
+| **Forms**                       | React Hook Form                                      |
+| **Payment**                     | Stripe Payment API                                   |
+| **Authentication**              | Firebase Auth                                        |
+| **Media**                       | ReactPannellum for 360-degree interactive images     |
+
