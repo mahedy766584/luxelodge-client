@@ -35,4 +35,15 @@ It also supports hotel administrators with tools to manage room listings, offers
 7. **Dark Mode**
 - Toggle between light and dark modes for a personalized browsing experience.
 
+## Admin-Focused Features:
+1. **Room Management**
+- Add, update, or delete rooms with detailed attributes like beds, bathrooms, and facilities.
+2. **Offers and Discounts**
+- Manage promotional offers directly from the admin panel.
+3. **Booking Analytics**
+- Track room bookings and generate insights (future enhancement).
 
+## **Technologies Used
+| Category                        | Technologies                                    |
+|:--------------------------------|:-----------------------------------------------:|
+| Frontend	                      | React.js, Tailwind CSS
