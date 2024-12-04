@@ -1,4 +1,4 @@
-# LuxeLodge - Hotel Management System
+# LuxeLodge - Hotel Management System 🌐
 
 LuxeLodge is a state-of-the-art hotel management web application designed for seamless room booking, immersive virtual tours, and efficient operations. This system is built with modern web development tools to deliver an exceptional user experience.
 Currently, two official plugins are available:
@@ -10,7 +10,7 @@ LuxeLodge is a fully responsive hotel management platform aimed at providing gue
 - Comprehensive information about rooms, pricing, and offers.
 It also supports hotel administrators with tools to manage room listings, offers, and customer details.
 
-## Features
+## 🌟 Features
 ### Guest-Focused Features:
 1. **Interactive Hero Section**
  - Features a high-quality 360-degree virtual tour of the hotel using ReactPannellum.
@@ -43,7 +43,7 @@ It also supports hotel administrators with tools to manage room listings, offers
 3. **Booking Analytics**
 - Track room bookings and generate insights (future enhancement).
 
-## Technologies Used
+## 🛠 Technologies Used
 | **Category**                    | **Technologies**                                     |
 |---------------------------------|------------------------------------------------------|
 | **Frontend**                    | React.js, Tailwind CSS                               |
@@ -56,3 +56,10 @@ It also supports hotel administrators with tools to manage room listings, offers
 | **Media**                       | ReactPannellum for 360-degree interactive images     |
 | **Component Livery**            | Material Tailwind                                    |
 
+
+## 🔗 Live Demo
+Check out the live version of my portfolio: [LuxeLodge](https://luxelodge-5b783.web.app/)
+
+## 📬 Contact
+- **Email:** mehediweb2023@gmail.com
+- **Linkedin:** [LinkedIn Profile](https://www.linkedin.com/in/mohammad-mehedi-hasan-364b2432b/)
