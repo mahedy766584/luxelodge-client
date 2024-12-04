@@ -12,9 +12,27 @@ It also supports hotel administrators with tools to manage room listings, offers
 
 ## Features
 ### Guest-Focused Features:
-1. Interactive Hero Section
+1. **Interactive Hero Section**
  - Features a high-quality 360-degree virtual tour of the hotel using ReactPannellum.
  - Adds an immersive visual experience for guests.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Dynamic Room Booking**
+- Real-time availability checks for room booking.
+- Stable check-in and checkout dates to prevent overlap.
+
+3. **Paginated Room Listing**
+- Easy navigation for guests to explore available rooms.
+
+4. **Secure Payment Gateway**
+- Integrated with Stripe for safe and hassle-free payment processing.
+
+5. **Multi-language Support**
+- Users can switch between languages (e.g., English, Bengali) powered by google-translate-api-x.
+
+6. **Responsive UI**
+- Tailored for both mobile and desktop devices.
+
+7. **Dark Mode**
+- Toggle between light and dark modes for a personalized browsing experience.
+
+
