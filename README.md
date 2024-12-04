@@ -44,17 +44,23 @@ It also supports hotel administrators with tools to manage room listings, offers
 - Track room bookings and generate insights (future enhancement).
 
 ## 🛠 Technologies Used
-| **Category**                    | **Technologies**                                     |
-|---------------------------------|------------------------------------------------------|
-| **Frontend**                    | React.js, Tailwind CSS                               |
-| **Backend**                     | Node.js, Express.js                                  |
-| **Database**                    | MongoDB                                              |
-| **State Management**            | Context API, TanStack Query                          |
-| **Forms**                       | React Hook Form                                      |
-| **Payment**                     | Stripe Payment API                                   |
-| **Authentication**              | Firebase Auth                                        |
-| **Media**                       | ReactPannellum for 360-degree interactive images     |
-| **Component Livery**            | Material Tailwind                                    |
+| **Category**                                        | **Technologies**                                         |
+|-----------------------------------------------------|----------------------------------------------------------|
+|**Frontend**	                                      |      React.js, Tailwind CSS                              |
+|**Backend**	                                      |      Node.js, Express.js                                 |
+|**Database**	                                      |      MongoDB (NoSQL database)                            |
+|**State Management**	                              |      Context API, TanStack Query                         |
+|**Forms**	                                          |      React Hook Form                                     |
+|**Payment**	                                      |      Stripe Payment API                                  |
+|**Authentication**	                                  |      Firebase Auth                                       |
+|**Localization**	                                  |      google-translate-api-x                              |
+|**Media**	                                          |      ReactPannellum for 360-degree interactive images    |
+|**UI Components**	                                  |      @material-tailwind/react, React Icons               |
+|**Date & Time	date-fns, react-datepicker,**         |       react-date-range                                   |
+|**Google Integration**	                              |      @react-google-maps/api, React-Helmet-Async          |
+|**Toast & Alerts**	                                  |      react-hot-toast, react-toastify, sweetalert2        |
+|**Search & Sorting**                                 |      match-sorter, sort-by                               |
+
 
 
 ## 🔗 Live Demo
