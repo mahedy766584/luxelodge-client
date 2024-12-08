@@ -64,7 +64,7 @@ It also supports hotel administrators with tools to manage room listings, offers
 
 
 ## 🔗 Live Demo
-Check out the live version of my portfolio: [LuxeLodge](https://luxelodge-5b783.web.app/)
+Check out the live version of my Website: [LuxeLodge](https://luxelodge-5b783.web.app/)
 
 ## 📬 Contact
 - **Email:** mehediweb2023@gmail.com
