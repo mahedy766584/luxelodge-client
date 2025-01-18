@@ -5,13 +5,13 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import FirstPart from "../../Components/aboutContent/FirstPart";
 import SecondPart from "../../Components/aboutContent/SecondPart";
 import ThirdPart from "../../Components/aboutContent/ThirdPart";
-import LoadingAnimation from "../../Components/loding/LoadingAnimate";
+import MainLoading from "../../Components/mainLoading/MainLoading";
 
 
 import bgTop from "../../assets/aroundImg/around1.jpg";
-import image1 from "../../assets/aboutImage/image9.jpg";
-import image2 from "../../assets/aboutImage/image7.jpg";
-import image3 from "../../assets/aboutImage/image3.jpg";
+import image1 from "../../assets/aboutImage/iamge5.jpg";
+import image2 from "../../assets/aboutImage/image3.jpg";
+import image3 from "../../assets/aboutImage/image4.jpg";
 import { Helmet } from "react-helmet-async";
 
 
@@ -28,7 +28,7 @@ const About = () => {
     })
 
     if(isLoading){
-        return <LoadingAnimation/>
+        return <MainLoading/>
     }
 
     const aboutData = data && data[0]?.aboutLuxeLodge;

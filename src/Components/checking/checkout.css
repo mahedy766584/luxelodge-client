@@ -1,12 +1,13 @@
 /* Override background color of the calendar */
 .react-datepicker__month-container {
     background-color: #6B6978 !important;
+    color: black;
     /* Light blue background with high specificity */
 }
 
 /* Optional: Override header background */
 .react-datepicker__header {
-    background-color: #4C4C4C !important;
+    background-color: white !important;
     color: #C0C0C0 !important;
     /* Light blue background for the header */
     border-bottom: none !important;
@@ -20,7 +21,6 @@
     color: white !important;
     /* White text for selected date */
 }
-
 /* 
         goldRoss: "#B76E79",
         navyGray: "#4C4C4C",
@@ -29,3 +29,7 @@
         charcoal: "#333333",
         redBg: "#A4181B",
  */
+
+.checking_box{
+    @apply shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06),_0px_6px_6px_-3px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.06),0px_24px_24px_-12px_rgba(0,0,0,0.06)]
+}

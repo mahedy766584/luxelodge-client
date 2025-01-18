@@ -1,0 +1,9 @@
+.about_main_box {
+    @apply relative lg:mx-0 mx-auto lg:w-[240px] w-full h-[240px] bg-gray-200 overflow-hidden rounded shadow-xl;
+}
+.about_image {
+    @apply bg-cover bg-center bg-no-repeat bg-blend-overlay w-full h-full rounded lg:mx-0 mx-auto;
+}
+.about_child_box {
+    @apply absolute bottom-0 left-0 w-full h-0 bg-black bg-opacity-60 text-opacity-0 group-hover:text-opacity-100 text-white flex items-center justify-center text-lg font-semibold transition-all duration-700 group-hover:h-[240px] rounded lg:mx-0 mx-auto;
+}

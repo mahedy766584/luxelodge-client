@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import LoadingAnimate from "../loding/LoadingAnimate";
+import MainLoading from "../mainLoading/MainLoading";
 
 const PrivateRoute = ({ children }) => {
 
@@ -13,7 +13,7 @@ const PrivateRoute = ({ children }) => {
     // console.log(user);
 
     if (isLoading) {
-        return <LoadingAnimate />
+        return <MainLoading/>
     }
 
     if (user) {

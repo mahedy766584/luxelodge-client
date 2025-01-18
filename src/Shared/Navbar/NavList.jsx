@@ -1,5 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
+import Translate from "../../Components/translate/Translate";
 
 
 const NavList = () => {
@@ -17,7 +18,7 @@ const NavList = () => {
                             isPending ? "pending" : isActive ? "border-b-[3px] border-redBg text-redBg lg:px-[4px]" : ""
                         }
                     >
-                        Home
+                        <Translate en={'Home'} bn={'হোম'} ar={'الصفحة الرئيسية'}/>
                         <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NavLink>
                 </Typography>
@@ -32,7 +33,7 @@ const NavList = () => {
                             isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg px-[4px]" : ""
                         }
                     >
-                        Rooms
+                        <Translate en={'Rooms'} bn={'রুমগুলো'} ar={'الغرف'}/>
                         <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NavLink>
                 </Typography>
@@ -47,7 +48,7 @@ const NavList = () => {
                             isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg px-[4px]" : ""
                         }
                     >
-                        Gallery
+                        <Translate en={'Gallery'} bn={'গ্যালারি'} ar={'المعرض'}/>
                         <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NavLink>
                 </Typography>
@@ -62,7 +63,7 @@ const NavList = () => {
                             isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg px-[4px]" : ""
                         }
                     >
-                        Contact
+                        <Translate en={'Contact'} bn={'যোগাযোগ'} ar={'تواصل معنا'}/>
                         <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NavLink>
                 </Typography>
@@ -77,7 +78,7 @@ const NavList = () => {
                             isPending ? "pending" : isActive ? "border-b-[2px] border-redBg text-redBg px-[4px]" : ""
                         }
                     >
-                        About
+                        <Translate en={'About'} bn={'আমাদের সম্পর্কে'} ar={'معلومات عنا'}/>
                         <span className="absolute left-0 bottom-0 w-full rounded-full h-[2px] bg-redBg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NavLink>
                 </Typography>

@@ -1,0 +1,15 @@
+.card_main_box{
+    @apply  overflow-hidden rounded shadow-[0px_2px_33px_8px_rgba(204,204,204,0.32)] rounded-t;
+}
+.card-body{
+    @apply space-y-3 px-3 py-4
+}
+.card-title{
+    @apply text-xl font-medium font-poppins text-navyGray 
+}
+.card_star{
+    @apply flex items-center cursor-default gap-1 bg-yellow-100 text-[#FF5733] px-4 py-1 rounded-full font-bold
+}
+.card_icons{
+    @apply flex bg-gray-100 items-center cursor-default gap-1 px-2 py-1 rounded-md font-normal text-gray-500 text-[18px]
+}

@@ -21,7 +21,7 @@ const Profile = () => {
                     src={user.photoURL}
                 />
             </MenuHandler>
-            <MenuList className="bg-silver shadow-lg dark:bg-slate-950 dark:text-silver lg:-ml-16 text-navyGray">
+            <MenuList className="bg-white shadow-lg dark:bg-slate-950 dark:text-silver lg:-ml-16 text-navyGray">
                 <MenuItem className="flex items-center gap-2">
                     <CgProfile className="text-xl text-navyGray dark:text-silver " />
                     <Link to={'/dashboard'}>

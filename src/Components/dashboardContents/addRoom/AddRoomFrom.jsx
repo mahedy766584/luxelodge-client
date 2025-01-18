@@ -62,7 +62,7 @@ const AddRoomFrom = () => {
             pricePerNight: data.price,
         }
 
-        console.log(roomInfo);
+        // console.log(roomInfo);
 
         try {
 

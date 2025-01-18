@@ -9,6 +9,9 @@ import './navbar.css';
 import { Link } from "react-router-dom";
 import DarkMode from "../../Components/darkModeSystem/DarkMode";
 import Profile from "../../Components/navbarContent/Profile";
+import Button from "../../Components/button/Button";
+import LanguageSelector from "../../Components/translate/LanguageSelector";
+import Translate from "../../Components/translate/Translate";
 
 const NavbarMain = () => {
     const [openNav, setOpenNav] = useState(false);
@@ -48,9 +51,9 @@ const NavbarMain = () => {
             <div
                 className={`fixed top-0 left-0 w-full z-50  transition-transform duration-1000 ease-in-out 
                     ${isHidden ? '-translate-y-full' : 'translate-y-0'} 
-                    ${isScrolled ? 'bg-silver' : 'bg-transparent'} `}
+                    ${isScrolled ? 'bg-white' : 'bg-white'} `}
             >
-                <Navbar className={`rounded-none border-none dark:shadow-lg dark:shadow-slate-800 bg-silver dark:bg-slate-900 bg-opacity-100 py-2 lg:px-40 font-poppins max-w-[1920px]`}>
+                <Navbar className={`rounded-none border-none dark:shadow-lg dark:shadow-slate-800 bg-with dark:bg-slate-900 bg-opacity-100 py-1 lg:px-40 font-poppins max-w-[1920px]`}>
                     <div className="flex items-center justify-between w-full text-blue-gray-9008">
                         <Typography
                             as="a"
@@ -64,14 +67,20 @@ const NavbarMain = () => {
                             <NavList />
                         </div>
                         <div className="hidden flex-wrap items-center gap-2 lg:flex">
+                            <LanguageSelector/>
                             {/* this is component for dark mode system */}
                             {user ?
                                 // this is profile drop down component
                                 <Profile />
                                 :
-                                <div>
+                                <div className="-mt-12">
                                     <Link to={'/signIn'}>
-                                        <button className="btn btn4">Sign In</button>
+                                        <Button
+                                            border={'border'}
+                                            borderColor={'border-redBg'}
+                                            bounce_animate={'animate-none'}>
+                                            <Translate en={'Sign In'} bn={'সাইন ইন'} ar={'تسجيل الدخول'}/>
+                                        </Button>
                                     </Link>
                                 </div>
                             }

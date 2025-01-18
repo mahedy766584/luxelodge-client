@@ -32,7 +32,7 @@ const AroundTheHotel = () => {
 
     const customStyle = {
         width: "100%",
-        height: "500px",
+        height: "300px",
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -43,12 +43,12 @@ const AroundTheHotel = () => {
 
     return (
         <Container>
-            <div className="mb-20">
+            <div className="mb-10">
                 <h1 className="text-4xl font-normal text-center lg:text-start font-poppins py-5 text-navyGray">LuxeLodge Around</h1>
                 <div className="grid lg:grid-cols-4 pb-20">
                     {
                         aroundImages.map((image, index) => (
-                            <div key={index} className="w-full h-[400px] relative rounded lg:px-0">
+                            <div key={index} className="w-full h-[300px] relative rounded lg:px-0">
                                 <ReactPannellum
                                     id={`pannellum-${index}`} // Unique id for each image
                                     sceneId={`scene-${index}`} // Unique sceneId for each image

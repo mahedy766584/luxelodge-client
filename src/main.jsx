@@ -10,17 +10,20 @@ const queryClient = new QueryClient();
 import { ThemeProvider } from "@material-tailwind/react";
 import AuthProvider from './Components/provider/AuthProvider';
 import { ToastContainer } from 'react-toastify';
+import LanguageProvider from './Components/provider/LanguageProvider';
 
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <AuthProvider>
-          <RouterProvider router={myCreatedRouter} />
-        </AuthProvider>
-      </ThemeProvider>
-      <ToastContainer />
-      <Toaster />
+      <LanguageProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <RouterProvider router={myCreatedRouter} />
+          </AuthProvider>
+        </ThemeProvider>
+        <ToastContainer />
+        <Toaster />
+      </LanguageProvider>
     </QueryClientProvider>
   </HelmetProvider>
 )

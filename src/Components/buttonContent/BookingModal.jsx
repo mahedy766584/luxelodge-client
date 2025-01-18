@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Button, Dialog, DialogHeader, DialogBody, DialogFooter, Typography } from "@material-tailwind/react";
 import { useCallback, useEffect, useState } from "react";
@@ -41,7 +42,7 @@ const BookingModal = ({ roomDetails, startDates, endDates }) => {
     const email = watch("email");
     const phone = watch("number");
     // Check if any field is empty
-    const isDisabled = !fromAndTo || !room || !name || !email || !phone; 
+    const isDisabled = !fromAndTo || !room || !name || !email || !phone;
 
 
     const onSubmit = async (data) => {
@@ -62,7 +63,7 @@ const BookingModal = ({ roomDetails, startDates, endDates }) => {
             try {
                 const response = await axiosSecure.post('/booking', bookingInfo);
                 console.log(response);
-                if(response.data?.acknowledged){
+                if (response.data?.acknowledged) {
                     toast.success('Booking Successful 👍')
                     window.location.reload();
                 }
@@ -81,8 +82,12 @@ const BookingModal = ({ roomDetails, startDates, endDates }) => {
     return (
         <>
             <div>
-                <div onClick={handleOpen} className="mt-7">
-                    <BtComponent>
+                <div onClick={handleOpen} className="mt-7 flex justify-center">
+                    <BtComponent
+                        bounce_animate={'animate-none'}
+                        border={'border'}
+                        borderColor={'border-redBg'}
+                        >
                         Book Now
                     </BtComponent>
                 </div>

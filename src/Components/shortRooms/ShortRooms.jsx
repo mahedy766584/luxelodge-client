@@ -1,44 +1,57 @@
-import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import RoomsCard from "../roomCard/RoomsCard";
 import Container from "../Container/Container";
 import TitleSection from "../titleSection/TitleSection";
-import LoadingAnimate from "../loding/LoadingAnimate";
 import Button from "../../Components/button/Button";
 import { Link } from "react-router-dom";
+import MainLoading from "../mainLoading/MainLoading";
+import Translate from "../../Components/translate/Translate";
+import useRooms from "../../Hooks/useRooms";
+import useTranslate from "../../Hooks/useTranslate";
+import useTranslatedRooms from "../../Hooks/useTranslatedRooms";
 
 const ShortRooms = () => {
 
-    const axiosPublic = useAxiosPublic();
+    const [rooms, isLoading] = useRooms();
+    const { language } = useTranslate();
 
-    const { data: rooms = [], isLoading } = useQuery({
-        queryKey: ['rooms'],
-        queryFn: async () => {
-            const res = await axiosPublic.get('rooms')
-            return res.data;
-        }
-    });
+    const { data: translatedRooms, isFetching } = useTranslatedRooms(rooms, language);
 
 
-    if (isLoading) {
-        return <LoadingAnimate />
+    if (isLoading || isFetching) {
+        return <MainLoading />
     }
+
+    // console.log(translatedRooms)
 
     return (
         <Container>
             <div>
                 {/* title section here */}
-                <TitleSection title={'Escape to Comfort: Explore Our Luxurious Rooms'} subTitle={'"Indulge in ultimate comfort with our elegantly designed rooms, tailored to offer you a restful and memorable stay."'} />
+                <TitleSection
+                    textColor={'text-navyGray'}
+                    titleEnglish={'Escape to Comfort: Explore Our Luxurious Rooms'}
+                    titleBangla={'আমাদের বিলাসবহুল কক্ষসমূহ অন্বেষণ করুন'}
+                    titleArabic={'اهرب إلى الراحة: استكشف غرفنا الفاخرة'}
+                    subTitleEnglish={'"Indulge in ultimate comfort with our elegantly designed rooms, tailored to offer you a restful and memorable stay."'}
+                    subTitleBangla={'আমাদের সুন্দরভাবে ডিজাইন করা কক্ষগুলোর মাধ্যমে চরম আরাম উপভোগ করুন, যা আপনাকে একটি শান্তিপূর্ণ এবং স্মরণীয় থাকার অভিজ্ঞতা প্রদান করতে তৈরি।"'}
+                    subTitleArabic={'"استمتع بأقصى درجات الراحة مع غرفنا المصممة بأناقة، والتي تم تصميمها لتوفير إقامة مريحة ولا تُنسى."'}
+                />
 
                 {/* hotel room card */}
                 <div className="grid lg:grid-cols-2 grid-cols-1 gap-10">
                     {
-                        rooms?.rooms?.map((room) => <RoomsCard key={room._id} room={room} />).slice(0, 4)
+                        translatedRooms?.map((room) => <RoomsCard key={room._id} room={room} />).slice(0, 4)
                     }
                 </div>
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center mt-5">
                     <Link to={'/rooms'}>
-                        <Button>See All Room</Button>
+                        <Button
+                            background={'bg-white'}
+                            border={'border'}
+                            borderColor={'border-redBg'}
+                            bounce_animate={'animate-none'}>
+                            <Translate en={'See All Room'} bn={'সমস্ত রুম দেখুন'} ar={'عرض جميع الغرف'} />
+                        </Button>
                     </Link>
                 </div>
             </div>

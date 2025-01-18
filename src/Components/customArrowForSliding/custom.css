@@ -1,0 +1,22 @@
+.custom-arrow {
+    position: absolute;
+    bottom: -40px;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.custom-next {
+    right: 10px;
+}
+
+.custom-prev {
+    right: 60px;
+    position: absolute;
+}
+
