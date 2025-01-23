@@ -5,7 +5,7 @@ import image2 from "../../assets/aboutImage/image1.jpg";
 import image3 from "../../assets/aboutImage/image3.jpg";
 import image4 from "../../assets/aboutImage/image4.jpg";
 import image5 from "../../assets/aboutImage/iamge5.jpg";
-import Translate from "../../Components/translate/Translate";
+import Translate from "../translate/Translate";
 
 import "./about.css";
 
@@ -16,25 +16,13 @@ const About = () => {
                 <div className="relative font-poppins lg:flex justify-between gap-20">
                     <div className="relative text-navyGray space-y-5 lg:text-start text-center">
                         <p className="tracking-widest">
-                            <Translate
-                                en={'BEST STAY IN THE TOWN'}
-                                bn={'শহরের সেরা থাকার জায়গা'}
-                                ar={'أفضل إقامة في المدينة'}
-                            />
+                            <Translate text={'BEST STAY IN THE TOWN'}/>
                         </p>
                         <h1 className="text-4xl font-medium">
-                            <Translate
-                                en={'About Us'}
-                                bn={'আমাদের সম্পর্কে'}
-                                ar={'معلومات عنا'}
-                            />
+                            <Translate text={'About Us'}/>
                         </h1>
                         <p className="text-lg font-normal text-justify">
-                            <Translate
-                                en={'RestNest is a premium hotel situated in the heart of the city, offering a seamless blend of luxury, comfort, and modern elegance. With our prime location, we provide our guests with easy access to nearby landmarks, cultural attractions, and business hubs, making RestNest the perfect destination for both leisure and business travelers.'}
-                                bn={'RestNest একটি প্রিমিয়াম হোটেল যা শহরের কেন্দ্রে অবস্থিত। এটি বিলাসিতা, আরাম এবং আধুনিক সৌন্দর্যের এক নিখুঁত মিশ্রণ উপস্থাপন করে। আমাদের সুবিধাজনক অবস্থানের মাধ্যমে অতিথিরা কাছাকাছি দর্শনীয় স্থান, সাংস্কৃতিক আকর্ষণ এবং ব্যবসায়িক কেন্দ্রগুলোতে সহজেই পৌঁছাতে পারেন, যা RestNest-কে অবসরযাপনে আসা এবং ব্যবসায়িক ভ্রমণকারীদের জন্য আদর্শ গন্তব্যে পরিণত করেছে।'}
-                                ar={'ريست نيست هو فندق فاخر يقع في قلب المدينة، ويقدم مزيجًا مثاليًا من الفخامة والراحة والأناقة العصرية. بفضل موقعنا المتميز، نوفر لضيوفنا وصولاً سهلاً إلى المعالم السياحية القريبة والمعالم الثقافية ومراكز الأعمال، مما يجعل ريست نيست الوجهة المثالية للمسافرين بغرض الترفيه والأعمال.'}
-                            />
+                            <Translate text={'RestNest is a premium hotel situated in the heart of the city, offering a seamless blend of luxury, comfort, and modern elegance. With our prime location, we provide our guests with easy access to nearby landmarks, cultural attractions, and business hubs, making RestNest the perfect destination for both leisure and business travelers.'}/>
                         </p>
                         <div className="lg:absolute">
                             <Button
@@ -45,7 +33,7 @@ const About = () => {
                                 borderColor={'border-redBg'}
                                 uppercase={'uppercase'}
                             >
-                                <Translate en={'More Info'} bn={'আরও তথ্য'} ar={'معلومات أكثر'} />
+                                <Translate text={'More Info'}/>
                             </Button>
                         </div>
                     </div>
@@ -59,25 +47,25 @@ const About = () => {
                         <div className="about_main_box group">
                             <img src={image2} className="about_image" />
                             <div className="about_child_box">
-                                <Translate en={'Single Room'} bn={'একক কক্ষ'} ar={'غرفة مفردة'} />
+                                <Translate text={'Single Room'}/>
                             </div>
                         </div>
                         <div className="about_main_box group">
                             <img src={image3} className="about_image" />
                             <div className="about_child_box">
-                                <Translate en={'Double Room'} bn={'দ্বৈত কক্ষ'} ar={'غرفة مزدوجة'} />
+                                <Translate text={'Double Room'}/>
                             </div>
                         </div>
                         <div className="about_main_box group">
                             <img src={image4} className="about_image" />
                             <div className="about_child_box">
-                                <Translate en={'Room View'} bn={'কক্ষের দৃশ্য'} ar={'منظر الغرفة'} />
+                                <Translate text={'Room View'}/>
                             </div>
                         </div>
                         <div className="about_main_box group">
                             <img src={image5} className="about_image" />
                             <div className="about_child_box">
-                                <Translate en={'Room View'} bn={'কক্ষের দৃশ্য'} ar={'منظر الغرفة'} />
+                                <Translate text={'Room View'}/>
                             </div>
                         </div>
                     </div>

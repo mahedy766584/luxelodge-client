@@ -16,11 +16,10 @@ import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import uesAuth from "../../../Hooks/useAuth";
 import useAxiosPublic from '../../../Hooks/useAxiosPublic';
+import Translate from '../../translate/Translate';
 
 
 const CardSlider = ({ images, roomId }) => {
-
-    // console.log(roomId)
 
     const { user } = uesAuth();
     const axiosPublic = useAxiosPublic();
@@ -34,9 +33,6 @@ const CardSlider = ({ images, roomId }) => {
         }
     });
 
-
-    // console.log(likes);
-
     const likeRoom = async (roomId) => {
         const res = await axiosPublic.post('/room/like', { userEmail: user.email, roomId })
         return res.data;
@@ -45,13 +41,11 @@ const CardSlider = ({ images, roomId }) => {
     const { mutate, data } = useMutation({
         mutationFn: likeRoom,
         onSuccess: (data) => {
-            // console.log('Like Added successful', data)
+            console.log('Like Added successful', data)
 
             queryClient.invalidateQueries(['likes', roomId])
         }
     })
-
-    // console.log(data)
 
     const handleLike = (roomId) => {
         if (!roomId) {
@@ -82,7 +76,7 @@ const CardSlider = ({ images, roomId }) => {
                                 <div className='absolute w-full h-full bg-black top-0 bg-opacity-20'>
                                     <div className='w-full flex items-center justify-end px-4 py-3'>
                                         <div className='flex items-center gap-3'>
-                                            <span className="ml-2 text-white text-lg">{likes}</span>
+                                            <span className="ml-2 text-white text-lg"><Translate text={""} number={likes}/></span>
                                             <button
                                                 onClick={() => handleLike(roomId)}
                                                 className='cursor-pointer hover:scale-150 duration-300 text-2xl text-white'>🤍</button>

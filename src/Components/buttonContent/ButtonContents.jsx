@@ -6,47 +6,16 @@ import { Rating } from "@material-tailwind/react";
 import RoomsItems from "./RoomsItems";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { DateRange } from "react-date-range";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import "./details.css";
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import BookingModal from "./BookingModal";
-import useTranslate from "../../Hooks/useTranslate";
-import translateText from "../../api/translateApi";
 
 const ButtonContents = ({ roomDetails }) => {
 
-    const {language} = useTranslate();
     const { _id, title, roomNumber, pricePerNight, isAvailable, review, description, facilities, images, bathroom, beds, guests } = roomDetails || {};
-
-    const [translatedData, setTranslatedData] = useState({
-        title: "",
-        description: "",
-        // facilities: [],
-    });
-
-    useEffect(() => {
-        const translateRoomDetails = async () => {
-            try {
-                const translatedTitle = await translateText(title, language);
-                const translatedDescription = await translateText(description, language);
-                // const translatedFacilities = await Promise.all(
-                //     facilities.map((facility) => translateText(facility, language))
-                // );
-
-                setTranslatedData({
-                    title: translatedTitle,
-                    description: translatedDescription,
-                    // facilities: translatedFacilities,
-                });
-            } catch (error) {
-                console.error("Error translating room details:", error);
-            }
-        };
-
-        translateRoomDetails();
-    }, [language, title, description, facilities]);
 
     const [dates, setDates] = useState({
         startDate: new Date(),
@@ -73,7 +42,7 @@ const ButtonContents = ({ roomDetails }) => {
             <div className="mt-20">
                 {/* title here */}
                 <div className="py-5 space-y-4 text-center lg:text-start">
-                    <h1 className="text-4xl font-kanit font-normal text-navyGray">{translatedData.title}</h1>
+                    <h1 className="text-4xl font-kanit font-normal text-navyGray">{title}</h1>
                     <div className="flex items-center justify-center lg:justify-start gap-2">
                         <p className="text-navyGray text-xl font-poppins font-medium">Hotel Room</p> <Rating value={parseInt(review)} readonly ratedColor="gray" />
                     </div>
@@ -86,7 +55,7 @@ const ButtonContents = ({ roomDetails }) => {
                         <RoomsItems guests={guests} pricePerNight={pricePerNight} bathroom={bathroom} beds={beds} />
                         <div className="space-y-3 mb-10">
                             <h1 className="text-4xl font-normal text-center lg:text-start font-poppins text-navyGray">Description</h1>
-                            <p className="font-poppins font-normal text-xl lg:px-0 px-5 text-navyGray text-justify">{translatedData.description}</p>
+                            <p className="font-poppins font-normal text-xl lg:px-0 px-5 text-navyGray text-justify">{description}</p>
                         </div>
                         <div className="lg:hidden flex px-5">
                             {/* button component here */}

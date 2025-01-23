@@ -37,7 +37,8 @@
     "slick-carousel": "^1.8.1",
     "sort-by": "^1.2.0",
     "sweetalert2": "^11.14.4",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "translate": "^3.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

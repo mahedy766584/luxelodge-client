@@ -7,45 +7,23 @@ import { IconButton } from "@material-tailwind/react";
 import AroundTheHotel from "../../Components/aroundTheHotel/AroundTheHotel";
 import { Helmet } from "react-helmet-async";
 import MainLoading from "../../Components/mainLoading/MainLoading";
-import translateText from "../../api/translateApi";
-import useTranslate from "../../Hooks/useTranslate";
 
 const Rooms = () => {
 
     const axiosPublic = useAxiosPublic();
 
-    const { language } = useTranslate();
 
     const [currentPage, setCurrentPage] = useState(1);
     const limit = 4;
 
-
-
-    const translateRoomData = async (rooms, language) => {
-        return await Promise.all(
-            rooms.map(async (room) => ({
-                ...room,
-                title: await translateText(room.title, language),
-                description: await translateText(room.description, language),
-                beds: `${room.beds} ${await translateText("Bed", language)}`,
-                guests: `${room.guests} ${await translateText("Guest", language)}`,
-                bathroom: `${room.bathroom} ${await translateText("Bathroom", language)}`,
-            }))
-        );
-    };
-
-    const getRoomsWithTranslation = async (currentPage, limit, language) => {
+    const getRooms = async (currentPage, limit) => {
         const { data } = await axiosPublic.get(`rooms?page=${currentPage}&limit=${limit}`);
-        const translatedRooms = await translateRoomData(data.rooms, language);
-        return {
-            ...data,
-            rooms: translatedRooms,
-        };
+        return data
     };
 
     const { data = { items: [] }, isLoading } = useQuery({
-        queryKey: ['rooms', currentPage, language], // ভাষা সংযোজন
-        queryFn: () => getRoomsWithTranslation(currentPage, limit, language),
+        queryKey: ['rooms', currentPage,], 
+        queryFn: () => getRooms(currentPage, limit, ),
     });
 
 

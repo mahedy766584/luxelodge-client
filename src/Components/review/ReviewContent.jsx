@@ -10,16 +10,14 @@ import "./review.css";
 import NextArrow from "../customArrowForSliding/NextArrow";
 import PrevArrow from "../customArrowForSliding/PrevArrow";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
-import useTranslate from "../../Hooks/useTranslate";
-import useTranslatedReview from "../../Hooks/useTranslatedReviews";
 import MainLoading from "../mainLoading/MainLoading";
+import Translate from "../translate/Translate";
 
 const ReviewContent = () => {
 
     const axiosPublic = useAxiosPublic();
-    const { language } = useTranslate();
 
-    const { data: review = [] } = useQuery({
+    const { data: review = [], isLoading } = useQuery({
         queryKey: ['review'],
         queryFn: async () => {
             const res = await axiosPublic.get('/reviews')
@@ -27,7 +25,7 @@ const ReviewContent = () => {
         }
     })
 
-    const { data: translatedReview, isLoading } = useTranslatedReview(review, language);
+    
 
     if (isLoading) {
         return <MainLoading />
@@ -102,7 +100,7 @@ const ReviewContent = () => {
             <div className="slider-container relative mt-8">
                 <Slider {...settings}>
                     {
-                        translatedReview?.map((review) => (
+                        review?.map((review) => (
                             <div
                                 key={review._id}
                                 className="card relative w-full lg:h-[230px] h-96 font-poppins bg-white m-5 rounded-2xl overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
@@ -112,8 +110,8 @@ const ReviewContent = () => {
                                         <img src={review?.image} alt={review?.name} className="rounded-full w-20 h-20" />
                                     </div>
                                     <div className="text-center">
-                                        <p className="text-lg font-semibold">{review?.name}</p>
-                                        <p className="text-lg font-normal">{review?.description}</p>
+                                        <p className="text-lg text-navyGray font-semibold"><Translate text={review?.name}/></p>
+                                        <p className="text-lg text-navyGray font-normal"><Translate text={review?.description}/></p>
                                     </div>
                                 </div>
                             </div>

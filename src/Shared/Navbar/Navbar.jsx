@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import DarkMode from "../../Components/darkModeSystem/DarkMode";
 import Profile from "../../Components/navbarContent/Profile";
 import Button from "../../Components/button/Button";
-import LanguageSelector from "../../Components/translate/LanguageSelector";
+import TranslateSelector from "../../Components/translate/TranslateSelector";
 import Translate from "../../Components/translate/Translate";
 
 const NavbarMain = () => {
@@ -67,7 +67,7 @@ const NavbarMain = () => {
                             <NavList />
                         </div>
                         <div className="hidden flex-wrap items-center gap-2 lg:flex">
-                            <LanguageSelector/>
+                            <TranslateSelector />
                             {/* this is component for dark mode system */}
                             {user ?
                                 // this is profile drop down component
@@ -79,7 +79,7 @@ const NavbarMain = () => {
                                             border={'border'}
                                             borderColor={'border-redBg'}
                                             bounce_animate={'animate-none'}>
-                                            <Translate en={'Sign In'} bn={'সাইন ইন'} ar={'تسجيل الدخول'}/>
+                                            <Translate text={'Sign In'}/>
                                         </Button>
                                     </Link>
                                 </div>
@@ -105,11 +105,11 @@ const NavbarMain = () => {
                         <div className="flex w-full flex-nowrap py-6 items-center justify-center gap-x-4 lg:hidden">
                             {user ?
                                 <div onClick={logOut} className="cursor-pointer">
-                                    <button className="btn btn4">Sign Out</button>
+                                    <button className="btn btn4"><Translate text={'Sign Out'}/></button>
                                 </div>
                                 :
                                 <div>
-                                    <button className="btn btn4">Booking</button>
+                                    <button className="btn btn4"><Translate text={'Booking'}/></button>
                                 </div>
                             }
                         </div>
